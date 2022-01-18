@@ -11,6 +11,7 @@ public class LogReader {
 	RegistersView registers;
 	SourceViewArea sourceArea;
 	int currentStep = 0;
+	private String filePrefix = "";
 	
 	public LogReader(RegistersView registers, SourceViewArea sourceArea) {
 		this.registers = registers;
@@ -31,7 +32,6 @@ public class LogReader {
 		
 		if(!isLabel(step)) {
 			setRegisters(step);
-			var label = new String(step, StandardCharsets.UTF_8);
 			sourceArea.NextLine();
 			
 		}
@@ -39,7 +39,7 @@ public class LogReader {
 			var label = new String(step, StandardCharsets.UTF_8);
 			label = label.replaceAll("&","");
 			sourceArea.setLine(label);
-			System.out.print("label: " + label + "\n");
+			System.out.println("label: " + label + "\n");
 		}
 		
 		currentStep++;
@@ -77,6 +77,7 @@ public class LogReader {
 		return (int)input;
 	}
 	
+	@SuppressWarnings("unused")
 	private void printRegisters(byte[] bytes) {
 		for(var register : bytes) {
 			if(register < 0) {
@@ -89,8 +90,13 @@ public class LogReader {
 	}
 	
 	private String getFileName() {
-		final String prefix = "/home/adrian/Dokumenty/Dos/ide/";
-		return prefix + String.format("%04d", currentStep) + "DEBU.LOG";
+		var fileName = filePrefix + String.format("%04d", currentStep) + "DEBU.LOG";
+		System.out.print(fileName);
+		return fileName;
+	}
+	
+	public void setFile(String prefix) {
+		this.filePrefix = prefix;
 	}
 	
 	

@@ -1,7 +1,5 @@
 package com.adiro.nasm_ide;
 
-import java.util.regex.Pattern;
-
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;

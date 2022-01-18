@@ -1,0 +1,40 @@
+package com.adiro.nasm_ide;
+
+import java.io.File;
+
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.control.Button;
+import javafx.stage.DirectoryChooser;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+
+public class changeFileButton extends Button{
+	public changeFileButton(LogReader reader, Stage stage) {
+		super("Zmień lokalizacje plików");
+		this.setOnAction(new EventHandler<ActionEvent> () {
+			@Override public void handle(ActionEvent e) {
+				changeFile(reader, stage);
+			}
+		});
+	
+	}
+	
+
+	private void changeFile(LogReader reader, Stage stage) {
+		
+		DirectoryChooser dirChooser = new DirectoryChooser();
+		dirChooser.setTitle("Open Resource File");
+		
+		File defaultDir = new File("./");
+		dirChooser.setInitialDirectory(defaultDir);
+		dirChooser.showDialog(stage);
+		
+		File selectedDir = dirChooser.showDialog(stage);
+		
+		reader.setFile(selectedDir.getAbsolutePath());
+		
+		
+	}
+
+}

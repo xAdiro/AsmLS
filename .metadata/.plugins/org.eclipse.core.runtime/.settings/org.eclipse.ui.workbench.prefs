@@ -51,6 +51,7 @@ org.eclipse.egit.ui.UncommittedChangeForegroundColor=216,220,223
 org.eclipse.jdt.internal.ui.compare.JavaMergeViewer=1|Monospace|12.0|0|GTK|1|;
 org.eclipse.jdt.internal.ui.compare.PropertiesFileMergeViewer=1|Monospace|12.0|0|GTK|1|;
 org.eclipse.jdt.ui.ColoredLabels.inherited=143,143,191
+org.eclipse.jdt.ui.ColoredLabels.match_highlight=73,83,90
 org.eclipse.jdt.ui.ColoredLabels.writeaccess_highlight=255,128,128
 org.eclipse.jdt.ui.Javadoc.backgroundColor=48,54,59
 org.eclipse.jdt.ui.Javadoc.foregroundColor=235,237,239

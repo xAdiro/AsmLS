@@ -1,18 +1,13 @@
 package com.adiro.nasm_ide;
 
-import java.io.File;
 import java.io.IOException;
-import java.nio.file.Path;
-import java.util.Scanner;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.TextArea;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import java.nio.file.Files;
 
 
 
@@ -27,10 +22,13 @@ public class App extends Application {
     	var	sourceCode = new SourceViewArea();
     	var registers = new RegistersView();
     	var	reader = new LogReader(registers, sourceCode);
-    	var nextButton = new MoveNextButton(sourceCode, reader);
+    	var nextButton = new MoveNextButton(sourceCode, reader);  	
+    	
+    	var fileButton = new changeFileButton(reader, stage);
+    	var sourceButton = new SourceButton(sourceCode, stage);
     	
     	
-    	var column1 = new VBox(sourceCode, nextButton);
+    	var column1 = new VBox(sourceCode, nextButton, fileButton, sourceButton);
     	var column2 = new VBox(registers);
     	
     	var layout = new HBox(column1, column2);
