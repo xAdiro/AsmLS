@@ -1,0 +1,83 @@
+package com.adiro.nasm_ide;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+public class LogReader {
+	
+	RegistersView registers;
+	int currentStep = 0;
+	
+	public LogReader(RegistersView registers) {
+		this.registers = registers;
+	}
+	
+	public boolean NextLine(){
+		currentStep++;
+		
+		Path path = Paths.get(getFileName());
+		
+		byte[] step = null;
+		try {
+			step = Files.readAllBytes(path);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		if(!isLabel(step)) {
+			setRegisters(step);
+		}
+		else {
+			
+		}
+		
+		
+		return false;
+	}
+	
+	private void setRegisters(byte[] bytes) {
+		
+		int value = (int) (Math.pow(2, 8) * ToUByte(bytes[0]));
+		value += ToUByte(bytes[1]);
+		
+		registers.setAx(value);
+		
+		printRegisters(bytes);
+	}
+	
+	private int ToUByte(byte input) {
+		if(input < 0) {
+			return (int)input + 256;
+		}
+		return (int)input;
+	}
+	
+	private void printRegisters(byte[] bytes) {
+		for(var register : bytes) {
+			if(register < 0) {
+				System.out.println(register+256);
+			}
+			else {
+				System.out.println(register);
+			}
+		}
+	}
+	
+	private String getFileName() {
+		final String prefix = "/home/adrian/Dokumenty/Dos/ide/";
+		return prefix + String.format("%04d", currentStep) + "DEBU.LOG";
+	}
+	
+	
+
+	private boolean isLabel(byte[] bytes) {
+		
+		if(bytes.length == 8)
+			return true;
+		else
+			return false;
+		
+	}
+}

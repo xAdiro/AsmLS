@@ -1,0 +1,51 @@
+package com.adiro.nasm_ide;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.util.Scanner;
+
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.TextArea;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+import java.nio.file.Files;
+
+
+
+/**
+ * JavaFX App
+ */
+public class App extends Application {
+
+    @Override
+    public void start(Stage stage) throws IOException {
+    	
+    	File file = new File("/home/adrian/Dokumenty/Dos/ide/test.asm");
+    	
+    	var scanner = new Scanner(file);
+    	var content = "";
+    	
+    	while(scanner.hasNextLine()) {
+    		content += scanner.nextLine() + "\n";
+    	}
+    	scanner.close();
+    	
+    	
+  
+    	var	text = new TextArea();
+    	
+    	var vBox = new VBox(text);
+
+        var scene = new Scene(new StackPane(vBox), 1366, 768);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+}

@@ -1,0 +1,4 @@
+module com.adiro.nasm_ide {
+    requires javafx.controls;
+    exports com.adiro.nasm_ide;
+}

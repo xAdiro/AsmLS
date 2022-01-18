@@ -1,0 +1,5 @@
+
+sty 16, 2022 14:15:35.434 NEW SESSION
+sty 16, 2022 14:15:35.434 which: no mozilla in (/home/adrian/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin)
+sty 16, 2022 14:15:35.435 which: no netscape in (/home/adrian/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin)
+sty 16, 2022 14:15:35.436 which: no firefox in (/home/adrian/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin)

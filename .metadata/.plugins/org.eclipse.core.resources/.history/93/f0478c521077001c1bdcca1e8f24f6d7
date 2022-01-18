@@ -1,0 +1,17 @@
+package com.adiro.nasm_ide;
+
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.control.Button;
+
+public class MoveNextButton extends Button{
+	public MoveNextButton() {
+		super("Następny krok");
+		this.setOnAction(new EventHandler<ActionEvent> () {
+			@Override public void handle(ActionEvent e) {
+				System.out.print("klik");
+			}
+		});
+	}
+
+}

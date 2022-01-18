@@ -1,0 +1,10 @@
+INDEX VERSION 1.131+/home/adrian/repos/nasm ide/.metadata/.plugins/org.eclipse.jdt.core
+2791387042.index
+1585327972.index
+1161851997.index
+2559121045.index
+1920073681.index
+1473557688.index
+1865797976.index
+341676194.index
+1179901136.index
