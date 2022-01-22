@@ -1,0 +1,17 @@
+package com.adiro.nasm_ide.gui.menu;
+
+import com.adiro.nasm_ide.gui.button.SourceButton;
+
+import javafx.scene.layout.HBox;
+
+public class IconMenuBar extends HBox{
+	
+	public IconMenuBar() {
+		super();
+		
+		SourceButton b1 = new SourceButton();
+		
+		getChildren().addAll();
+	}
+
+}

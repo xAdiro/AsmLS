@@ -4,16 +4,16 @@
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="isLabel"/>
+		<item key="selection" value="Linia"/>
 		<list key="findhistory">
+			<item value="linia"/>
+			<item value="getFile"/>
+			<item value="getabs"/>
+			<item value="print"/>
+			<item value="get"/>
 			<item value="setLine"/>
 			<item value="halt"/>
 			<item value="printregi"/>
-			<item value="label"/>
-			<item value="print"/>
-			<item value="path"/>
-			<item value="klik"/>
-			<item value="syste"/>
 		</list>
 		<list key="replacehistory">
 		</list>

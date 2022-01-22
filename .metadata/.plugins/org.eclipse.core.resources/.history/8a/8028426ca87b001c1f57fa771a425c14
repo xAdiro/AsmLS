@@ -1,0 +1,111 @@
+package com.adiro.nasm_ide.gui.content;
+
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontPosture;
+import javafx.scene.text.Text;
+
+public class RegistersView extends VBox{
+	
+	private Register ax;
+	private Register bx;
+	private Register cx;
+	private Register dx;
+
+	public RegistersView() {
+		super();
+		
+//		var axText1 = new Text("AX: ");
+//		axText1.setFont(Font.font("Arial", FontPosture.REGULAR, 20));
+//		var axText2 = new Text("0");
+//		axText2.setFont(Font.font("Arial", FontPosture.REGULAR, 20));
+//		ax = new HBox(axText1, axText2);
+//		
+//		
+//		var bxText1 = new Text("BX: ");
+//		bxText1.setFont(Font.font("Arial", FontPosture.REGULAR, 20));
+//		var bxText2 = new Text("0");
+//		bxText2.setFont(Font.font("Arial", FontPosture.REGULAR, 20));
+//		bx = new HBox(bxText1, bxText2);
+//		
+//		var cxText1 = new Text("CX: ");
+//		cxText1.setFont(Font.font("Arial", FontPosture.REGULAR, 20));
+//		var cxText2 = new Text("0");
+//		cxText2.setFont(Font.font("Arial", FontPosture.REGULAR, 20));
+//		cx = new HBox(cxText1, cxText2);
+//		
+//		var dxText1 = new Text("DX: ");
+//		dxText1.setFont(Font.font("Arial", FontPosture.REGULAR, 20));
+//		var dxText2 = new Text("0");
+//		dxText2.setFont(Font.font("Arial", FontPosture.REGULAR, 20));
+//		dx = new HBox(dxText1, dxText2);
+		
+//		this.getChildren().add(ax);
+//		this.getChildren().add(bx);
+//		this.getChildren().add(cx);
+//		this.getChildren().add(dx);
+		
+		ax = new Register(" A");
+		bx = new Register(" B");
+		cx = new Register(" C");
+		dx = new Register(" D");
+		
+		getChildren().add(ax);
+		getChildren().add(bx);
+		getChildren().add(cx);
+		getChildren().add(dx);
+	}
+	
+	public void setAx(int newValue) {
+		ax.setValue(newValue);
+	}
+	
+	public void setBx(int newValue) {
+		bx.setValue(newValue);
+	}
+	
+	public void setCx(int newValue) {
+		cx.setValue(newValue);
+	}
+	
+	public void setDx(int newValue) {
+		dx.setValue(newValue);
+	}
+	
+	private class Register extends HBox{
+		int value = 0;
+		private Text rxText;
+		private Text rlText;
+		private Text rhText;
+		private String registerLetter;
+		
+		public Register(String registerLetter) {
+			super();
+			this.registerLetter = registerLetter;
+			
+			rxText = new Text(registerLetter + "X: " + Integer.toString(value));
+			rxText.setFont(Font.font("Arial", FontPosture.REGULAR, 20));
+			rxText.minWidth(1000);
+			
+			rlText = new Text(registerLetter + "L: " + Integer.toString(value & 0x00FF));
+			rlText.setFont(Font.font("Arial", FontPosture.REGULAR, 12));
+			var rl = new HBox(rlText);
+			
+			rhText = new Text(registerLetter + "H: " + Integer.toString(value >> 8));
+			rhText.setFont(Font.font("Arial", FontPosture.REGULAR, 12));
+			var rh = new HBox(rhText);
+			
+			var halves = new VBox(rh, rl);
+			
+			getChildren().addAll(rxText, halves);
+		}
+		
+		public void setValue(int newValue) {
+			rxText.setText(registerLetter + "X: " + Integer.toString(newValue));
+			rlText.setText(registerLetter + "L: " + Integer.toString(newValue & 0x00FF));
+			rhText.setText(registerLetter + "H: " + Integer.toString(newValue & 0xFF00));
+			
+		}
+	}
+}

@@ -1,0 +1,14 @@
+1642819656588	Move compilation units
+1642819702149	Move compilation unit
+1642819762133	Move compilation units
+1642819863914	Rename type 'changeFileButton'
+1642819881722	Rename type 'MoveNextButton'
+1642820605688	Move compilation unit
+1642859487404	Move compilation units
+1642859779491	Rename type 'SourceViewArea'
+1642863336919	Rename type 'SourceButton'
+1642863354463	Rename type 'MoveNext'
+1642870862968	Delete element
+1642872726194	Rename type 'MovePrevButton'
+1642873233878	Rename type 'GoEndButton'
+1642895236253	Rename method 'setSourceCode'

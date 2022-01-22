@@ -1,0 +1,23 @@
+package com.adiro.nasm_ide.gui.menu;
+
+import com.adiro.nasm_ide.gui.button.ChangeSourceFileButton;
+import com.adiro.nasm_ide.gui.button.MoveBackButton;
+import com.adiro.nasm_ide.gui.button.MoveNextButton;
+import com.adiro.nasm_ide.gui.content.ContentView;
+
+import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
+
+public class IconMenuBar extends HBox{
+	
+	public IconMenuBar(ContentView contentView, Stage stage) {
+		super();
+		
+		var b1 = new ChangeSourceFileButton(contentView, stage);
+		var b2 = new MoveNextButton(contentView);
+		var b3 = new MoveBackButton(contentView);
+		
+		getChildren().addAll(b1, b2);
+	}
+
+}

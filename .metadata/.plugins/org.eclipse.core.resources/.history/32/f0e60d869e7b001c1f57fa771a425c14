@@ -1,0 +1,24 @@
+package com.adiro.nasm_ide.gui.content;
+
+import com.adiro.nasm_ide.logic.LogReader;
+
+import javafx.scene.layout.VBox;
+
+public class ContentView extends VBox{
+	
+		RegistersView registersView;
+		SourceCodeView scView;
+		LogReader logReader;
+	
+		public ContentView(LogReader logReader) {
+			
+			super();
+			
+			this.registersView = new RegistersView();
+			this.scView = new SourceCodeView();
+			this.logReader = logReader;
+			
+			getChildren().addAll(scView, registersView);
+			
+		}
+}

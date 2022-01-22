@@ -1,0 +1,59 @@
+package com.adiro.nasm_ide;
+
+import java.io.IOException;
+
+import com.adiro.nasm_ide.gui.button.MoveNextButton;
+import com.adiro.nasm_ide.gui.button.ChangeSourceFileButton;
+import com.adiro.nasm_ide.gui.content.ContentView;
+import com.adiro.nasm_ide.gui.content.RegistersView;
+import com.adiro.nasm_ide.gui.content.SourceCodeView;
+import com.adiro.nasm_ide.gui.button.ChangeFile;
+import com.adiro.nasm_ide.logic.LogReader;
+
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+
+
+/**
+ * JavaFX App
+ */
+public class App extends Application {
+
+    @Override
+    public void start(Stage stage) throws IOException {
+
+    	var contentView = new ContentView();
+    	var nextButton = new MoveNextButton(contentView);  	
+    	
+    	//var fileButton = new ChangeFile(contentView, stage);
+    	var sourceButton = new ChangeSourceFileButton(contentView, stage);
+    	
+    	
+    	//var column1 = new VBox(sourceCode, nextButton, fileButton, sourceButton);
+    	//var column2 = new VBox(registers);
+    	
+    	var contentView = new ContentView();
+    	
+    	
+    	var topMenu = new HBox();
+    	var buttonMenu = new HBox();
+    	//var	sourceCode = new 
+    	
+    	
+    	var layout = new HBox(contentView);
+
+        var scene = new Scene(new StackPane(layout), 1366, 768);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+}

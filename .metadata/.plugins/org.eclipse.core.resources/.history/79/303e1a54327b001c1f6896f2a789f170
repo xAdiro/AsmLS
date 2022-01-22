@@ -1,0 +1,54 @@
+package com.adiro.nasm_ide;
+
+import java.io.IOException;
+
+import com.adiro.nasm_ide.gui.RegistersView;
+import com.adiro.nasm_ide.gui.SourceViewArea;
+import com.adiro.nasm_ide.gui.button.MoveNext;
+import com.adiro.nasm_ide.gui.button.SourceButton;
+import com.adiro.nasm_ide.gui.button.ChangeFile;
+import com.adiro.nasm_ide.logic.LogReader;
+
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+
+
+/**
+ * JavaFX App
+ */
+public class App extends Application {
+
+    @Override
+    public void start(Stage stage) throws IOException {
+
+    	var	sourceCode = new SourceViewArea();
+    	sourceCode.setSourceCodePath("/home/adrian/Dokumenty/Dos/ide/zegar.ASM");
+    	var registers = new RegistersView();
+    	var	reader = new LogReader(registers, sourceCode);
+    	reader.setLogDirectory("/home/adrian/Dokumenty/Dos/ide/");
+    	var nextButton = new MoveNext(sourceCode, reader);  	
+    	
+    	var fileButton = new ChangeFile(reader, stage);
+    	var sourceButton = new SourceButton(sourceCode, stage);
+    	
+    	
+    	var column1 = new VBox(sourceCode, nextButton, fileButton, sourceButton);
+    	var column2 = new VBox(registers);
+    	
+    	var layout = new HBox(column1, column2);
+
+        var scene = new Scene(new StackPane(layout), 1366, 768);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+}
