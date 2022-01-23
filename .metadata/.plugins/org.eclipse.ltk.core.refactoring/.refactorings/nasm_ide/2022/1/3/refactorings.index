@@ -12,3 +12,7 @@
 1642872726194	Rename type 'MovePrevButton'
 1642873233878	Rename type 'GoEndButton'
 1642895236253	Rename method 'setSourceCode'
+1642895877860	Rename field 'code'
+1642898568223	Rename type 'TextWithBackground'
+1642901042767	Rename method 'haltNextLine'
+1642901987779	Delete element

@@ -3356,3 +3356,561 @@
 2022-01-23 00:47:16,486 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
 2022-01-23 00:47:16,486 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2022-01-23 00:47:16,486 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 00:54:29,197 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 00:54:29,197 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 00:54:29,198 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 00:54:29,198 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 00:54:39,746 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 00:54:39,746 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 00:54:39,747 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 00:54:39,747 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 00:57:58,019 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 00:57:58,019 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 00:57:58,020 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 00:57:58,021 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 00:58:28,822 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 00:58:28,823 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 00:58:28,823 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 00:58:28,823 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:01:43,071 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:01:43,072 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:01:43,072 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:01:43,072 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:02:01,226 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:02:01,226 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:02:01,226 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:02:01,226 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:02:13,686 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:02:13,686 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:02:13,686 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:02:13,686 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:07:23,374 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:07:23,374 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:07:23,375 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:07:23,375 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:09:16,213 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-01-23 01:12:14,170 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:12:14,171 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:12:14,173 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:12:14,173 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:12:35,527 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:12:35,528 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:12:35,529 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:12:35,529 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:12:49,316 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:12:49,316 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:12:49,317 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:12:49,317 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:12:56,412 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:12:56,412 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:12:56,413 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:12:56,413 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:13:03,707 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:13:03,707 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:13:03,708 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:13:03,708 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:13:06,360 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:13:06,361 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:13:06,361 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:13:06,361 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:13:36,140 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:13:36,140 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:13:36,141 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:13:36,141 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:16:16,895 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:16:16,895 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:16:16,897 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:16:16,898 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:19:52,977 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:19:52,977 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:19:52,978 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:19:52,978 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:20:20,053 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:20:20,054 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:20:20,054 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:20:20,054 [Worker-34: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:20:50,882 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:20:50,882 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:20:50,883 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:20:50,883 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:20:56,802 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:20:56,802 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:20:56,803 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:20:56,803 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:21:49,273 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:21:49,273 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:21:49,274 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:21:49,274 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:22:06,700 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:22:06,700 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:22:06,701 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:22:06,701 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:23:27,913 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:23:27,913 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:23:27,914 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:23:27,914 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:23:48,993 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:23:48,993 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:23:48,995 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:23:48,995 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:24:09,620 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:24:09,620 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:24:09,621 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:24:09,621 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:27:07,996 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:27:07,996 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:27:07,996 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:27:07,997 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:27:36,843 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:27:36,843 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:27:36,845 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:27:36,845 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:27:54,828 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:27:54,828 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:27:54,829 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:27:54,829 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:28:15,171 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:28:15,171 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:28:15,172 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:28:15,172 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:33:42,561 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:33:42,561 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:33:42,561 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:33:42,561 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:33:46,810 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:33:46,810 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:33:46,811 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:33:46,811 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:33:57,456 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:33:57,456 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:33:57,457 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:33:57,457 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:35:33,517 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:35:33,517 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:35:33,517 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:35:33,518 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:35:42,745 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:35:42,745 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:35:42,745 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:35:42,746 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:36:12,113 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:36:12,113 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:36:12,114 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:36:12,114 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:36:50,348 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:36:50,348 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:36:50,349 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:36:50,349 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:37:59,911 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:37:59,912 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:37:59,913 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:37:59,913 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:39:21,434 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:39:21,435 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:39:21,435 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:39:21,435 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:39:26,814 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:39:26,814 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:39:26,815 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:39:26,815 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:39:55,877 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:39:55,877 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:39:55,878 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:39:55,878 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:41:45,575 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:41:45,575 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:41:45,576 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:41:45,576 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:41:59,480 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:41:59,480 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:41:59,480 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:41:59,480 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:42:03,435 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:42:03,436 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:42:03,436 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:42:03,436 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:42:48,400 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:42:48,400 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:42:48,401 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:42:48,402 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:42:59,154 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:42:59,154 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:42:59,154 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:42:59,154 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:43:08,174 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:43:08,174 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:43:08,175 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:43:08,175 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:43:38,926 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:43:38,926 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:43:38,927 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:43:38,927 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:43:42,568 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:43:42,569 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:43:42,569 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:43:42,569 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:43:47,347 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:43:47,347 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:43:47,348 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:43:47,348 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:44:29,202 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:44:29,202 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:44:29,202 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:44:29,203 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:47:13,314 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:47:13,314 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:47:13,315 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:47:13,315 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:47:21,718 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:47:21,718 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:47:21,719 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:47:21,719 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:47:46,358 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:47:46,358 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:47:46,359 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:47:46,359 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:47:57,056 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:47:57,057 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:47:57,058 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:47:57,058 [Worker-42: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:49:59,271 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:49:59,271 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:49:59,272 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:49:59,272 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:50:32,097 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:50:32,097 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:50:32,098 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:50:32,098 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:51:21,216 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:51:21,216 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:51:21,216 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:51:21,216 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:51:25,586 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:51:25,586 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:51:25,587 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:51:25,587 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:51:38,775 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:51:38,775 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:51:38,776 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:51:38,776 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:51:45,535 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:51:45,535 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:51:45,536 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:51:45,536 [Worker-48: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:52:42,100 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:52:42,100 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:52:42,101 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:52:42,101 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:53:06,424 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:53:06,424 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:53:06,425 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:53:06,425 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:53:14,354 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:53:14,354 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:53:14,355 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:53:14,355 [Worker-47: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:53:18,354 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:53:18,354 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:53:18,354 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:53:18,354 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:55:19,912 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:55:19,912 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:55:19,912 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:55:19,912 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:55:26,293 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:55:26,293 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:55:26,293 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:55:26,294 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:56:31,843 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:56:31,844 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:56:31,844 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:56:31,844 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:56:56,820 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:56:56,820 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:56:56,821 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:56:56,821 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:58:25,761 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:58:25,762 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:58:25,762 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:58:25,762 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:58:28,593 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:58:28,593 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:58:28,594 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:58:28,594 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:58:36,494 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:58:36,494 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:58:36,494 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:58:36,494 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 01:59:53,558 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:59:53,558 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 01:59:53,559 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 01:59:53,559 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:00:08,530 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:00:08,531 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:00:08,531 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:00:08,531 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:01:11,714 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:01:11,714 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:01:11,714 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:01:11,714 [Worker-51: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:01:28,607 [Worker-49: Launching App] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:01:28,607 [Worker-49: Launching App] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:01:28,608 [Worker-49: Launching App] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:01:28,608 [Worker-49: Launching App] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:02:04,533 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:02:04,534 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:02:04,534 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:02:04,534 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:02:15,619 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:02:15,619 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:02:15,620 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:02:15,620 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:02:21,109 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:02:21,109 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:02:21,110 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:02:21,110 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:02:57,340 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:02:57,340 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:02:57,341 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:02:57,341 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:03:10,258 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:03:10,258 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:03:10,259 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:03:10,259 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:03:44,466 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:03:44,466 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:03:44,466 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:03:44,467 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:04:02,968 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:04:02,969 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:04:02,969 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:04:02,969 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:04:20,023 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:04:20,023 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:04:20,023 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:04:20,023 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:04:40,482 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:04:40,482 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:04:40,483 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:04:40,483 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:04:42,496 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:04:42,496 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:04:42,497 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:04:42,497 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:05:27,608 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:05:27,608 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:05:27,609 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:05:27,609 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:08:06,104 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:08:06,104 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:08:06,105 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:08:06,105 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:08:31,174 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:08:31,174 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:08:31,174 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:08:31,174 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:08:47,140 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:08:47,140 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:08:47,140 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:08:47,140 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:08:53,397 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:08:53,397 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:08:53,398 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:08:53,398 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:09:17,787 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:09:17,787 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:09:17,788 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:09:17,788 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:09:36,095 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:09:36,095 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:09:36,095 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:09:36,095 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:10:21,407 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:10:21,407 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:10:21,408 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:10:21,408 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:10:47,533 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:10:47,533 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:10:47,533 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:10:47,533 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:11:03,600 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:11:03,601 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:11:03,601 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:11:03,601 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:11:19,588 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:11:19,588 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:11:19,588 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:11:19,588 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:11:57,291 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:11:57,291 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:11:57,291 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:11:57,291 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:12:03,709 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:12:03,710 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:12:03,710 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:12:03,710 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:12:21,539 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:12:21,539 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:12:21,540 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:12:21,540 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:12:35,035 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:12:35,035 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:12:35,035 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:12:35,035 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:13:18,179 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:13:18,179 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:13:18,180 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:13:18,180 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:13:34,165 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:13:34,165 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:13:34,165 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:13:34,165 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:14:15,828 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:14:15,828 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:14:15,829 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:14:15,829 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:15:42,684 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:15:42,684 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:15:42,685 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:15:42,685 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:15:55,894 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:15:55,894 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:15:55,895 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:15:55,895 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:16:15,158 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:16:15,159 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:16:15,159 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:16:15,159 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:16:42,243 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:16:42,243 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:16:42,243 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:16:42,243 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:16:49,246 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:16:49,246 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:16:49,246 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:16:49,246 [Worker-56: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:16:50,934 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:16:50,934 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:16:50,935 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:16:50,935 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:17:12,069 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:17:12,070 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:17:12,070 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:17:12,070 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:17:37,745 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:17:37,745 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:17:37,745 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:17:37,745 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:18:16,187 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:18:16,187 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:18:16,188 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:18:16,188 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:18:26,455 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:18:26,455 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:18:26,455 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:18:26,456 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:18:30,639 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:18:30,639 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:18:30,639 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:18:30,639 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:19:45,635 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:19:45,635 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:19:45,635 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:19:45,635 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:19:50,987 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:19:50,987 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:19:50,987 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:19:50,987 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:20:30,527 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:20:30,527 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:20:30,528 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:20:30,528 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:20:33,896 [Worker-57: Launching App] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:20:33,896 [Worker-57: Launching App] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:20:33,896 [Worker-57: Launching App] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:20:33,896 [Worker-57: Launching App] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:24:02,958 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:24:02,958 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:24:02,959 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:24:02,959 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:24:07,206 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:24:07,207 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:24:07,207 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:24:07,207 [Worker-50: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:24:45,930 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:24:45,930 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:24:45,931 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:24:45,931 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:26:20,498 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:26:20,500 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:26:20,501 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:26:20,501 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:26:31,537 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:26:31,537 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:26:31,537 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:26:31,537 [Worker-49: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:28:33,830 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:28:33,830 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:28:33,830 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:28:33,830 [Worker-59: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:28:36,453 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:28:36,453 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:28:36,453 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:28:36,453 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:31:41,291 [Worker-54: Launching App] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:31:41,291 [Worker-54: Launching App] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:31:41,292 [Worker-54: Launching App] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:31:41,292 [Worker-54: Launching App] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:33:12,636 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:33:12,636 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:33:12,637 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:33:12,637 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:33:40,759 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:33:40,759 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:33:40,759 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:33:40,759 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:34:15,025 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:34:15,025 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:34:15,026 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:34:15,026 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:34:20,321 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:34:20,321 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:34:20,321 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:34:20,321 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:35:54,439 [Worker-66: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:35:54,439 [Worker-66: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:35:54,439 [Worker-66: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:35:54,439 [Worker-66: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:35:57,776 [Worker-66: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:35:57,776 [Worker-66: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:35:57,776 [Worker-66: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:35:57,776 [Worker-66: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:37:57,528 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:37:57,528 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:37:57,528 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:37:57,528 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:39:00,107 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:39:00,108 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:39:00,108 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:39:00,108 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:39:47,926 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:39:47,927 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:39:47,928 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:39:47,928 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:42:04,347 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:42:04,349 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:42:04,350 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:42:04,350 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:42:18,251 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:42:18,251 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:42:18,252 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:42:18,252 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:42:29,260 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:42:29,260 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:42:29,261 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:42:29,261 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources
+2022-01-23 02:42:59,362 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2022-01-23 02:43:01,944 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:43:01,944 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/main/resources
+2022-01-23 02:43:01,946 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-23 02:43:01,946 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/adrian/repos/nasm ide/nasm_ide/src/test/resources

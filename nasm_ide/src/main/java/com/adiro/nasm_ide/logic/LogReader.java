@@ -28,12 +28,10 @@ public class LogReader {
 		try {
 			step = Files.readAllBytes(path);
 		} catch (IOException e) {
-			sourceArea.haltNextLine();
+			sourceArea.haltLine(sourceArea.getCurrentLine()+1);
 			return false;
 		}
-		finally {
-			currentStep++;
-		}
+		currentStep++;
 		
 		
 		sourceArea.goToLine(readRegister(step, 0));

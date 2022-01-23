@@ -12,6 +12,7 @@
 	<item key="CallHierarchyViewPart.ratio3" value="500"/>
 	<item key="CallHierarchyViewPart.orientation" value="3"/>
 	<item key="CallHierarchyViewPart.ratio1" value="500"/>
+	<item key="delegateUpdating" value="false"/>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item key="group_libraries" value="true"/>
 		<item key="layout" value="2"/>

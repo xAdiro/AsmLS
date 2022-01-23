@@ -1,0 +1,5 @@
+package com.adiro.nasm_ide.gui.content;
+
+public static class GuiColors {
+		final Color linePassed = new Color(0xFF00FF);
+}

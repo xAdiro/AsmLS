@@ -32,9 +32,9 @@ public class ContentView extends HBox{
 			return logReader.prevLine();
 		}
 		
-		public void haltNextLine() {
-			scView.haltNextLine();
-		}
+		//public void haltLine() {
+		//	scView.haltLine();
+		//}
 		
 		public void setSourceCodePath(String path) {
 			scView.setSourceCodePath(path);

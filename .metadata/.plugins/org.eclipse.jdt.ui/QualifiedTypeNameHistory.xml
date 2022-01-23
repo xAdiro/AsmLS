@@ -10,7 +10,6 @@
     <fullyQualifiedTypeName name="javafx.scene.text.TextFlow"/>
     <fullyQualifiedTypeName name="javafx.scene.control.ScrollPane"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="javafx.scene.paint.Color"/>
     <fullyQualifiedTypeName name="javafx.scene.text.Text"/>
     <fullyQualifiedTypeName name="java.util.regex.Pattern"/>
     <fullyQualifiedTypeName name="java.nio.charset.StandardCharsets"/>
@@ -25,16 +24,22 @@
     <fullyQualifiedTypeName name="java.nio.file.Paths"/>
     <fullyQualifiedTypeName name="javafx.scene.Parent"/>
     <fullyQualifiedTypeName name="com.adiro.nasm_ide.gui.button.SourceButton"/>
-    <fullyQualifiedTypeName name="javafx.scene.layout.VBox"/>
     <fullyQualifiedTypeName name="com.adiro.nasm_ide.logic.LogReader"/>
     <fullyQualifiedTypeName name="java.io.FileWriter"/>
-    <fullyQualifiedTypeName name="javafx.scene.layout.HBox"/>
     <fullyQualifiedTypeName name="javafx.stage.Stage"/>
     <fullyQualifiedTypeName name="com.adiro.nasm_ide.gui.content.ContentView"/>
     <fullyQualifiedTypeName name="com.adiro.nasm_ide.gui.button.MoveNextButton"/>
     <fullyQualifiedTypeName name="com.adiro.nasm_ide.gui.menu.IconMenuBar"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="javafx.scene.control.Separator"/>
     <fullyQualifiedTypeName name="com.adiro.nasm_ide.gui.button.MoveBackButton"/>
     <fullyQualifiedTypeName name="com.adiro.nasm_ide.gui.button.MoveToEndButton"/>
+    <fullyQualifiedTypeName name="javafx.geometry.Insets"/>
+    <fullyQualifiedTypeName name="javafx.scene.layout.Background"/>
+    <fullyQualifiedTypeName name="javafx.scene.layout.BackgroundFill"/>
+    <fullyQualifiedTypeName name="javafx.scene.layout.CornerRadii"/>
+    <fullyQualifiedTypeName name="javafx.scene.control.Separator"/>
+    <fullyQualifiedTypeName name="javafx.scene.layout.HBox"/>
+    <fullyQualifiedTypeName name="javafx.scene.layout.VBox"/>
+    <fullyQualifiedTypeName name="javafx.scene.paint.Color"/>
+    <fullyQualifiedTypeName name="com.adiro.nasm_ide.gui.button.MoveToStartButton"/>
 </qualifiedTypeNameHistroy>

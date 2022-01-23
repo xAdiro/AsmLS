@@ -10,7 +10,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import javafx.geometry.Insets;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.Separator;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.CornerRadii;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
@@ -19,7 +26,7 @@ import javafx.scene.text.TextFlow;
 
 public class SourceCodeView extends ScrollPane {
 	
-	List<Text> code;
+	List<TextLine> sourceCode;
 	private int currentLine = 0;
 	private String sourceCodePath;
 	
@@ -35,17 +42,17 @@ public class SourceCodeView extends ScrollPane {
 	public boolean goToNextLine() {
 		
 		do {
-			if(currentLine < code.size() - 1) {
+			if(currentLine < sourceCode.size() - 1) {
 				currentLine++;
 			}
 			else {
 				return false;
 			}
 		}
-		while(code.get(currentLine).getText().isBlank());
+		while(sourceCode.get(currentLine).getText().isBlank());
 		
 		
-		colorLine(currentLine);
+		colorLine(currentLine, GuiColors.LINEPASSED);
 		return true;
 	}
 	
@@ -55,7 +62,7 @@ public class SourceCodeView extends ScrollPane {
 		int i = -1;
 		
 		do {
-			if(currentLine >= code.size()-1)
+			if(currentLine >= sourceCode.size()-1)
 				return false;
 			
 			goToNextLine();
@@ -63,7 +70,7 @@ public class SourceCodeView extends ScrollPane {
 		}
 		while(i < index);
 		
-		setVvalue( (1.0 / (code.size()-29))* (currentLine - 0.2));
+		setVvalue( (1.0 / (sourceCode.size()-29))* (currentLine - 0.2));
 		
 		
 		
@@ -75,17 +82,17 @@ public class SourceCodeView extends ScrollPane {
 		loadSourceCode();
 	}
 	
-	public void haltNextLine() {
+	public void haltLine(int index) {
 		clearColors();
 		try {
-			currentLine++;
-			code.get(currentLine).setFill(Color.RED);
+			colorLine(index, GuiColors.LINEERROR);
 		}
 		catch(Exception e) {
 			System.out.println("[ERROR] No line to color");
 		}
 		
 	}
+	
 	public int getCurrentLine() {
 		return currentLine;
 	}
@@ -93,7 +100,7 @@ public class SourceCodeView extends ScrollPane {
 	private boolean loadSourceCode() {
 		File file = new File(sourceCodePath);
 		
-		code = new ArrayList<>();
+		sourceCode = new ArrayList<>();
     	
     	Scanner scanner = null;
 		try {
@@ -103,34 +110,51 @@ public class SourceCodeView extends ScrollPane {
 			
 			return false;
 		}
+		
+		var contentText = new VBox();
+//		contentText.setPadding(new Insets(0, 0, 0, 0));
+//		VBox.setMargin(contentText, new Insets(0, 0, 0, 0));
+//		contentText.setPrefHeight(0);
+		
     	
     	while(scanner.hasNextLine()) {
-    		code.add(new Text(scanner.nextLine() + "\n"));
+    		var line = new Text(scanner.nextLine());
+    		line.setFont(Font.font("Arial", FontPosture.REGULAR, 20));
+    		
+    		var textLine = new TextLine(line);
+    		
+    		sourceCode.add(textLine);
+    		contentText.getChildren().add(textLine);
+    		//contentText.getChildren().add(new Text("\n"));
     	}
     	scanner.close();
     	
-    	var text = new TextFlow();
     	
-    	for(var line : code ) {
-    		line.setFont(Font.font("Arial", FontPosture.REGULAR, 20));
-    		text.getChildren().add(line);
-    	}
     	
-    	this.setContent(text);
+    	
+    	
+    	this.setContent(contentText);
     	
     	return true;
 	}
 	
 	private void clearColors() {
-		for(var line : code) {
-			line.setFill(Color.BLACK);
+		for(var line : sourceCode) {
+			line.setBackground(
+					new Background(
+							new BackgroundFill(
+									Color.WHITESMOKE, CornerRadii.EMPTY, Insets.EMPTY)));
 		}
 	}
 	
-	private void colorLine(int n) {
+	private void colorLine(int n, Color color) {
 		
 		clearColors();
-		code.get(n).setFill(Color.GREEN);
+		
+		sourceCode.get(n).setBackground(
+				new Background(
+						new BackgroundFill(
+								color, CornerRadii.EMPTY, Insets.EMPTY)));
 	}
 	
 	public String getPrevLocation() {
@@ -147,6 +171,29 @@ public class SourceCodeView extends ScrollPane {
 			if(prevLocation.isBlank()) prevLocation = "./";
 			return prevLocation;
 		}
+	
+	private class TextLine extends TextFlow{
+		
+		private Text text;
+		
+		public TextLine(Text text) {
+			super(text);
+			this.text = text;
+			setPadding(new Insets(0));
+			
+		}
+		
+		public void setBackgroundColor(Color color) {
+			setBackground(
+					new Background(
+							new BackgroundFill(
+									color, CornerRadii.EMPTY, Insets.EMPTY)));
+		}
+		
+		public String getText() {
+			return text.getText();
+		}
+	}
 	
 	
 }
