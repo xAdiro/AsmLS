@@ -1,4 +1,4 @@
-package com.adiro.nasm_ide.gui.content;
+package com.adiro.nasm_ide.gui.content.codeview;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -10,11 +10,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import com.adiro.nasm_ide.gui.content.GuiColors;
+
 import javafx.geometry.Insets;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.control.Separator;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.Border;
+import javafx.scene.layout.BorderStroke;
+import javafx.scene.layout.BorderStrokeStyle;
+import javafx.scene.layout.BorderWidths;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -24,19 +29,35 @@ import javafx.scene.text.FontPosture;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 
-public class SourceCodeView extends ScrollPane {
+public class CodeView extends ScrollPane {
 	
-	List<TextLine> sourceCode;
+	private List<TextLine> sourceCode;
 	private int currentLine = 0;
 	private String sourceCodePath;
+	private VBox code;
+	private LineCounter lineCounter;
 	
-	public SourceCodeView() {
+	public CodeView() {
 		super();
+		code = new VBox();
     	setMaxSize(1000, 700);
     	setMinSize(1000, 700);
-    	setFocusTraversable(false);
     	sourceCodePath = getPrevLocation();
+    	lineCounter = new LineCounter(0);
     	loadSourceCode();
+    	
+    	
+    	code.setStyle("-fx-background-color:transparent;");
+    	setBorder(new Border(
+    			new BorderStroke(
+    					Color.LIGHTGRAY, 
+    					BorderStrokeStyle.SOLID, 
+    					null, 
+    					new BorderWidths(1))));
+    	
+    	
+    	var layout = new HBox(lineCounter, code);
+    	setContent(layout);
 	}
 	
 	public boolean goToNextLine() {
@@ -111,7 +132,8 @@ public class SourceCodeView extends ScrollPane {
 			return false;
 		}
 		
-		var contentText = new VBox();
+		//var contentText = new VBox();
+		code.getChildren().clear();
 		
     	
     	while(scanner.hasNextLine()) {
@@ -121,15 +143,11 @@ public class SourceCodeView extends ScrollPane {
     		var textLine = new TextLine(line);
     		
     		sourceCode.add(textLine);
-    		contentText.getChildren().add(textLine);
+    		code.getChildren().add(textLine);
     	}
     	scanner.close();
     	
-    	
-    	
-    	
-    	
-    	this.setContent(contentText);
+    	lineCounter.setLineNumber(getLength());
     	
     	return true;
 	}
@@ -168,6 +186,10 @@ public class SourceCodeView extends ScrollPane {
 			return prevLocation;
 		}
 	
+	public int getLength() {
+		return sourceCode.size();
+	}
+	
 	private class TextLine extends TextFlow{
 		
 		private Text text;
@@ -179,6 +201,7 @@ public class SourceCodeView extends ScrollPane {
 			
 		}
 		
+		@SuppressWarnings("unused")
 		public void setBackgroundColor(Color color) {
 			setBackground(
 					new Background(

@@ -6,16 +6,16 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import com.adiro.nasm_ide.gui.content.RegistersView;
-import com.adiro.nasm_ide.gui.content.SourceCodeView;
+import com.adiro.nasm_ide.gui.content.codeview.CodeView;
 
 public class LogReader {
 	
 	RegistersView registers;
-	SourceCodeView sourceArea;
+	CodeView sourceArea;
 	int currentStep = 0;
 	private String filePrefix = "/home/adrian/Dokumenty/Dos/ide/debug/";
 	
-	public LogReader(RegistersView registers, SourceCodeView sourceArea) {
+	public LogReader(RegistersView registers, CodeView sourceArea) {
 		this.registers = registers;
 		this.sourceArea = sourceArea;
 	}

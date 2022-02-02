@@ -4,7 +4,6 @@ import com.adiro.nasm_ide.gui.content.ContentView;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.scene.control.Button;
 
 public class MoveNextButton extends StyledButton{
 	public MoveNextButton(ContentView contentView) {

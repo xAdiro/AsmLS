@@ -5,8 +5,6 @@ import java.io.File;
 import java.io.*;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.text.MessageFormat;
 import java.util.regex.Pattern;
 
@@ -21,37 +19,30 @@ public final class DebugFileCreator {
 				reader = new BufferedReader(new FileReader(sourceFilePath));
 				
 				
-				
 				String line = reader.readLine();
 				int i = 0;
 				while(line != null) {
 					
 					if(!line.isBlank()) {
-						
-						String regexLoop = "loop.*";
-						var loopPattern = Pattern.compile(regexLoop);
-						var matcher = loopPattern.matcher(line.trim());
-						if(matcher.matches()) {
-							
-							String label = line.trim().substring(line.trim().indexOf("loop") + 4);
+						if(!isMemoryLine(line)) {
+							line = fixLoop(line);
 							
 							
-							line = "dec cx\n"
-									+ "cmp cx, 0\n"
-									+ "jnz "
-									+ label + "\n";
+							outputContent += 
+									  line	+ "\n"
+									+ ";<DEBUG>\n"
+									+ MessageFormat.format("mov	[dane], byte {0}", (i >> 8)) + "\n"
+									+ MessageFormat.format("mov	[dane+1], byte {0}", (i & 0x00FF)) + "\n"
+									+ "call 	zapLinie\n"	
+									+ ";</DEBUG>\n";
 						}
-						
-						
-						outputContent += 
-								  line	+ "\n"
-								+ ";<DEBUG>\n"
-								+ MessageFormat.format("mov	[dane], byte {0}", (i >> 8)) + "\n"
-								+ MessageFormat.format("mov	[dane+1], byte {0}", (i & 0x00FF)) + "\n"
-								+ "call 	zapLinie\n"	
-								+ ";</DEBUG>\n";
+						else {
+							line = line+"\t;MEMORY\n";
+							outputContent += line;
+						}
 						i++;
 					}
+					
 					else {
 						outputContent += line + "\n";
 					}
@@ -87,10 +78,40 @@ public final class DebugFileCreator {
 		}
 		
 			
+		private static String fixLoop(String line) {
 			
+			String regexLoop = "loop.*";
+			var loopPattern = Pattern.compile(regexLoop);
+			var matcher = loopPattern.matcher(line.trim());
+			if(matcher.matches()) {
+				
+				String label = line.trim().substring(line.trim().indexOf("loop") + 4);
+				
+				
+				line = "dec cx\n"
+						+ "cmp cx, 0\n"
+						+ "jnz "
+						+ label + "\n";
+			}
+			return line;
+			
+		}
+		
+		private static boolean isMemoryLine(String line) {
+			
+			
+			//String regexMemoryLine = "[\t, ]*(([^(\t| )]*[\t, ]+)|([\t, ]*))db[\t, ]+";
+			String regexMemoryLine =".*[\t, ]+(db|dw|dd|dq|dt)[\t, ]+.*";
+			var memoryLinePattern = Pattern.compile(regexMemoryLine);
+			var matcher = memoryLinePattern.matcher(line);
+
+			if(matcher.matches()) return true;
+			return false;
+		}
 		
 		private static String getFileDirectory(String filePath) {
 			File sourceFile = new File(filePath);
 			return sourceFile.getParent();
 		}
+		
 }

@@ -1,17 +1,11 @@
 package com.adiro.nasm_ide.gui.content;
 
-import java.util.ArrayList;
-import java.util.List;
 
 import com.adiro.nasm_ide.gui.custom_blocks.DoubleText;
-
 import javafx.geometry.Insets;
 import javafx.scene.control.Separator;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontPosture;
-import javafx.scene.text.Text;
 
 public class RegistersView extends VBox{
 	

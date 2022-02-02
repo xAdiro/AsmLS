@@ -2,6 +2,7 @@ package com.adiro.nasm_ide.gui.content;
 
 import java.io.File;
 
+import com.adiro.nasm_ide.gui.content.codeview.CodeView;
 import com.adiro.nasm_ide.logic.LogReader;
 
 import javafx.scene.layout.HBox;
@@ -9,7 +10,7 @@ import javafx.scene.layout.HBox;
 public class ContentView extends HBox{
 	
 		private RegistersView registersView;
-		private SourceCodeView scView;
+		private CodeView scView;
 		private LogReader logReader;
 	
 		public ContentView() {
@@ -17,7 +18,7 @@ public class ContentView extends HBox{
 			super();
 			
 			this.registersView = new RegistersView();
-			this.scView = new SourceCodeView();
+			this.scView = new CodeView();
 			this.logReader = new LogReader(registersView, scView);
 			
 			getChildren().addAll(scView, registersView);
