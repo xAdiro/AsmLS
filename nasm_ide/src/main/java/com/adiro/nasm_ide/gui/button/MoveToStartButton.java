@@ -4,11 +4,10 @@ import com.adiro.nasm_ide.gui.content.ContentView;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.scene.control.Button;
 
-public class MoveToStartButton extends Button{
+public class MoveToStartButton extends StyledButton{
 	public MoveToStartButton(ContentView contentView) {
-		super("<<<");
+		super("|<");
 		this.setOnAction(new EventHandler<ActionEvent> () {
 			@Override public void handle(ActionEvent e) {
 				moveToEnd(contentView);

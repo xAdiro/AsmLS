@@ -25,7 +25,7 @@ public class ContentView extends HBox{
 		}
 		
 		public boolean nextLine() {
-			return logReader.NextLine();
+			return logReader.nextLine();
 		}
 		
 		public boolean prevLine() {

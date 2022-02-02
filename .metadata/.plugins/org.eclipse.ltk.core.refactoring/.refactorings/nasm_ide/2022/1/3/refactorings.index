@@ -16,3 +16,5 @@
 1642898568223	Rename type 'TextWithBackground'
 1642901042767	Rename method 'haltNextLine'
 1642901987779	Delete element
+1642943009808	Rename type 'Register'
+1642968226994	Rename method 'NextLine'

@@ -6,7 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 
-public class MoveNextButton extends Button{
+public class MoveNextButton extends StyledButton{
 	public MoveNextButton(ContentView contentView) {
 		super(">");
 		this.setOnAction(new EventHandler<ActionEvent> () {

@@ -6,9 +6,9 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 
-public class MoveToEndButton extends Button{
+public class MoveToEndButton extends StyledButton{
 	public MoveToEndButton(ContentView contentView) {
-		super(">>>");
+		super(">|");
 		this.setOnAction(new EventHandler<ActionEvent> () {
 			@Override public void handle(ActionEvent e) {
 				moveToEnd(contentView);

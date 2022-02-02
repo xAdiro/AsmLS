@@ -8,21 +8,18 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import com.adiro.nasm_ide.gui.content.ContentView;
+import com.adiro.nasm_ide.logic.DebugFileCreator;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-public class ChangeSourceFileButton extends Button{
+public class ChangeSourceFileButton extends StyledButton{
 	public ChangeSourceFileButton(ContentView contentView, Stage stage) {
-		super();
-		var icon = new ImageView("file:resources/icons/file.png");
-		icon.setPreserveRatio(true);
-		icon.setFitHeight(17);
-		setGraphic(icon);
+		super(new ImageView("file:resources/icons/file.png"));
+		
 		this.setOnAction(new EventHandler<ActionEvent> () {
 			@Override public void handle(ActionEvent e) {
 				changeFile(contentView, stage);
@@ -49,11 +46,14 @@ public class ChangeSourceFileButton extends Button{
 			filePath = selectedFile.getAbsolutePath();
 			contentView.setSourceCodePath(filePath);
 			setPrevLocation(filePath);
-			System.out.println("Selceted: " + filePath);
+			DebugFileCreator.createDebugFile(filePath);
+			System.out.println("Selected: " + filePath);
 		}
 		else {
 			System.out.println("No file selected, nothing to do");
 		}
+		
+		
 		
 		
 		

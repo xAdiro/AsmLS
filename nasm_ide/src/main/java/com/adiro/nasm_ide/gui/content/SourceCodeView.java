@@ -112,9 +112,6 @@ public class SourceCodeView extends ScrollPane {
 		}
 		
 		var contentText = new VBox();
-//		contentText.setPadding(new Insets(0, 0, 0, 0));
-//		VBox.setMargin(contentText, new Insets(0, 0, 0, 0));
-//		contentText.setPrefHeight(0);
 		
     	
     	while(scanner.hasNextLine()) {
@@ -125,7 +122,6 @@ public class SourceCodeView extends ScrollPane {
     		
     		sourceCode.add(textLine);
     		contentText.getChildren().add(textLine);
-    		//contentText.getChildren().add(new Text("\n"));
     	}
     	scanner.close();
     	

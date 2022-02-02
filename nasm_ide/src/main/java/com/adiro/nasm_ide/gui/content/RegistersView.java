@@ -1,5 +1,10 @@
 package com.adiro.nasm_ide.gui.content;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import com.adiro.nasm_ide.gui.custom_blocks.DoubleText;
+
 import javafx.scene.control.Separator;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -9,18 +14,21 @@ import javafx.scene.text.Text;
 
 public class RegistersView extends VBox{
 	
-	private Register ax;
-	private Register bx;
-	private Register cx;
-	private Register dx;
+	private StandardRegister ax;
+	private StandardRegister bx;
+	private StandardRegister cx;
+	private StandardRegister dx;
+	private FlagsRegister flags;
 
 	public RegistersView() {
 		super();
 		
-		ax = new Register(" A");
-		bx = new Register(" B");
-		cx = new Register(" C");
-		dx = new Register(" D");
+		ax = new StandardRegister(" A");
+		bx = new StandardRegister(" B");
+		cx = new StandardRegister(" C");
+		dx = new StandardRegister(" D");
+		flags = new FlagsRegister();
+		
 		
 		
 		getChildren().add(ax);
@@ -30,6 +38,8 @@ public class RegistersView extends VBox{
 		getChildren().add(cx);
 		getChildren().add(new Separator());
 		getChildren().add(dx);
+		getChildren().add(new Separator());
+		getChildren().add(flags);
 	}
 	
 	public void setAx(int newValue) {
@@ -48,42 +58,84 @@ public class RegistersView extends VBox{
 		dx.setValue(newValue);
 	}
 	
-	private class Register extends HBox{
+	public void setFlags(int newValue) {
+		flags.setValue(newValue);
+	}
+	
+	private class StandardRegister extends HBox{
 		int value = 0;
-		private Text rxText;
-		private Text rlText;
-		private Text rhText;
-		private String registerLetter;
+		private DoubleText rxText;
+		private DoubleText rlText;
+		private DoubleText rhText;
 		
-		public Register(String registerLetter) {
+		public StandardRegister(String registerLetter) {
 			super();
-			this.registerLetter = registerLetter;
 			
-			rxText = new Text(registerLetter + "X: " + Integer.toString(value));
-			rxText.setFont(Font.font("Arial", FontPosture.REGULAR, 20));
-			var rx = new HBox(rxText);
-			rx.setMinWidth(150);
+			var label = registerLetter + "X:";
+			rxText = new DoubleText(label, Integer.toString(value), 20);
+			rxText.setMinWidth(150);
 			
-			rlText = new Text(registerLetter + "L: " + Integer.toString(value & 0x00FF));
-			rlText.setFont(Font.font("Arial", FontPosture.REGULAR, 12));
+			
+			label = registerLetter + "L:";
+			rlText = new DoubleText(label, Integer.toString(value & 0x00FF), 12);
 			var rl = new HBox(rlText);
 			rl.setMinWidth(100);
 			
-			rhText = new Text(registerLetter + "H: " + Integer.toString(value >> 8));
-			rhText.setFont(Font.font("Arial", FontPosture.REGULAR, 12));
+			label = registerLetter + "H:";
+			rhText = new DoubleText(label, Integer.toString(value >> 8), 12);
 			var rh = new HBox(rhText);
 			rh.setMinWidth(100);
 			
 			var halves = new VBox(rh, rl);
 			
-			getChildren().addAll(rx, halves);
+			getChildren().addAll(rxText, halves);
 		}
 		
 		public void setValue(int newValue) {
-			rxText.setText(registerLetter + "X: " + Integer.toString(newValue));
-			rlText.setText(registerLetter + "L: " + Integer.toString(newValue & 0x00FF));
-			rhText.setText(registerLetter + "H: " + Integer.toString(newValue >> 8));
+			rxText.setValue(newValue);
+			rlText.setValue(newValue & 0x00FF);
+			rhText.setValue(newValue >> 8);
 			
+		}
+	}
+	
+	private class FlagsRegister extends VBox{
+		
+		private DoubleText[] flags;
+		
+		public FlagsRegister() {
+			super();
+			
+			var flagFontSize = 12;
+			flags = new DoubleText[16];
+			flags[0] = new DoubleText("CF:", "0", flagFontSize);
+			flags[1] = new DoubleText("1:", "0", flagFontSize);
+			flags[2] = new DoubleText("PF:", "0", flagFontSize);
+			flags[3] = new DoubleText("0:", "0", flagFontSize);
+			flags[4] = new DoubleText("AF:", "0", flagFontSize);
+			flags[5] = new DoubleText("0:", "0", flagFontSize);
+			flags[6] = new DoubleText("ZF:", "0", flagFontSize);
+			flags[7] = new DoubleText("SF:", "0", flagFontSize);
+			flags[8] = new DoubleText("TF:", "0", flagFontSize);
+			flags[9] = new DoubleText("IF:", "0", flagFontSize);
+			flags[10] = new DoubleText("DF:", "0", flagFontSize);
+			flags[11] = new DoubleText("OF:", "0", flagFontSize);
+			flags[12] = new DoubleText("PL:", "0", flagFontSize);
+			flags[13] = new DoubleText("IO:", "0", flagFontSize);
+			flags[14] = new DoubleText("NT:", "0", flagFontSize);
+			flags[15] = new DoubleText("0:", "0", flagFontSize);
+			
+			for(var flag : flags) {
+				getChildren().add(flag);
+			}
+			
+		}
+		
+		public void setValue(int newValue) {
+			
+			for(int i = 0; i < flags.length; i++) {
+				flags[i].setValue((newValue >> i) & 1);
+			}
 		}
 	}
 }
