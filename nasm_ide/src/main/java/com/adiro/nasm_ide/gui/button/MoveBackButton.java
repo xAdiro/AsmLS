@@ -17,7 +17,7 @@ public class MoveBackButton extends StyledButton{
 	}
 	
 
-	private void moveBack(ContentView contentView) {
+	protected void moveBack(ContentView contentView) {
 			contentView.prevLine();
 	}
 

@@ -17,7 +17,7 @@ public class MoveNextButton extends StyledButton{
 	}
 	
 
-	private void moveNext(ContentView contentView) {
+	protected void moveNext(ContentView contentView) {
 			contentView.nextLine();
 	}
 
