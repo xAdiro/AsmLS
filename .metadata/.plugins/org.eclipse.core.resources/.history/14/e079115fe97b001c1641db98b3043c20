@@ -1,7 +1,0 @@
-package com.adiro.nasm_ide.gui.content;
-
-import javafx.scene.paint.Color;
-
-public static class GuiColors {
-		final Color linePassed = new Color(255,255,255,255);
-}
