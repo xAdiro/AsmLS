@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.adiro.nasm_ide.gui.custom_blocks.DoubleText;
 
+import javafx.geometry.Insets;
 import javafx.scene.control.Separator;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -106,7 +107,7 @@ public class RegistersView extends VBox{
 		public FlagsRegister() {
 			super();
 			
-			var flagFontSize = 12;
+			var flagFontSize = 16;
 			flags = new DoubleText[16];
 			flags[0] = new DoubleText("CF:", "0", flagFontSize);
 			flags[1] = new DoubleText("1:", "0", flagFontSize);
@@ -128,6 +129,7 @@ public class RegistersView extends VBox{
 			for(var flag : flags) {
 				getChildren().add(flag);
 			}
+			VBox.setMargin(this, new Insets(0,0,0,10));
 			
 		}
 		
