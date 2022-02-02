@@ -1,5 +1,4 @@
-package com.adiro.nasm_ide.gui.button;
-
+package com.adiro.nasm_ide.gui.menubar.textmenu;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -12,23 +11,22 @@ import com.adiro.nasm_ide.logic.DebugFileCreator;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-public class ChangeSourceFileButton extends StyledButton{
-	public ChangeSourceFileButton(ContentView contentView, Stage stage) {
-		super(new ImageView("file:resources/icons/file.png"));
-		
-		this.setOnAction(new EventHandler<ActionEvent> () {
+import javafx.scene.control.MenuItem;
+
+class FileSubMenu extends MenuItem{
+	public FileSubMenu(ContentView contentView, Stage stage){
+		super("Open new file");
+		setOnAction(new EventHandler<ActionEvent> () {
 			@Override public void handle(ActionEvent e) {
 				changeFile(contentView, stage);
 			}
 		});
-	
 	}
 	
-	private void changeFile(ContentView contentView, Stage stage) {
+private void changeFile(ContentView contentView, Stage stage) {
 		
 		FileChooser fileChooser = new FileChooser();
 		fileChooser.setTitle("Open Resource File");
@@ -46,18 +44,12 @@ public class ChangeSourceFileButton extends StyledButton{
 			filePath = selectedFile.getAbsolutePath();
 			contentView.setSourceCodePath(filePath);
 			setPrevLocation(filePath);
-			DebugFileCreator.createDebugFile(filePath);
+			DebugFileCreator.createRunFile(filePath);
 			System.out.println("Selected: " + filePath);
 		}
 		else {
 			System.out.println("No file selected, nothing to do");
 		}
-		
-		
-		
-		
-		
-		
 	}
 	
 	private String getPrevDirectory() {
@@ -71,7 +63,8 @@ public class ChangeSourceFileButton extends StyledButton{
 			
 			
 		} catch (IOException e) {
-			System.out.println("[WARNING] Missing resources/locations/source, the program might be corrupted");
+			System.out.println(
+					"[WARNING] Missing resources/locations/source, the program might be corrupted");
 		}
 		
 		if(prevLocation.isBlank()) prevLocation = "./";
@@ -84,11 +77,9 @@ public class ChangeSourceFileButton extends StyledButton{
 			writer.write(location);
 			writer.flush();
 			writer.close();
-			
-			
-			
 		} catch (IOException e) {
-			System.out.print("[WARNING] Missing resources/locations/source, the program might be corrupted");
+			System.out.print(
+					"[WARNING] Missing resources/locations/source, the program might be corrupted");
 		}
 		return false;
 		

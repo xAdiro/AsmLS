@@ -20,7 +20,7 @@
 		;int		21h
 
 ;**** Zmienne ****
-nazwFold                    db  'a:\ide\debug',0
+;akutalne polozenie
 nazwPlik					db	'0000', 47		;'00000'
 							db	'deb.log',	0
 
@@ -32,16 +32,14 @@ dane						dw	0				;nr linii
             TIMES	529		db	0				;rejestry, stos etc.
 
 ;**** Funkcje ****
-%include "rejestry.asm"
 
 
 ;[F] Zapisuje numer linii spod DX i stan rejestrów do pliku
 zapLinie:
 		pushf
-        pusha
+		pusha
 
 		call	.rejDoZm
-		call    .ustFold
 		call	.utwLog
 
 		mov		ah, 3dh
@@ -63,7 +61,7 @@ zapLinie:
 
 		mov		dx, dane		;wrzuc adres danych do zapisu, do DX
 		mov		ah, 40h
-		mov		cx,16			;zapisz piewrsze 16 bajtow (8 rejestrow)
+		mov		cx, 20			;zapisz piewrsze 20 bajtow (nrLinii + 8 rejestrow + flagi)
 		int		21h
 
 		mov		ah, 3eh			;zamknij plik
@@ -72,27 +70,6 @@ zapLinie:
 		popa
 		popf
 		ret
-;[f] Zmienia folder - cd nazwFold
-.ustFold:
-
-        mov     dx, nazwFold
-        mov     ah, 3Bh
-        int     21h
-        jnc		.noErr2
-
-
-        mov		dl, al
-        add		dl, '0'			;Wyswietla bład w razie czego
-        mov		ah, 2
-        xor		al, al
-        int		21h
-
-.noErr2:
-
-
-
-
-        ret
 
 ;[f] Zapisuje rejestry i flagi do zmiennej "dane"
 .rejDoZm:

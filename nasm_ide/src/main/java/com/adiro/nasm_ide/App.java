@@ -2,8 +2,8 @@ package com.adiro.nasm_ide;
 
 import java.io.IOException;
 import com.adiro.nasm_ide.gui.content.ContentView;
-import com.adiro.nasm_ide.gui.menu.IconMenuBar;
-import com.adiro.nasm_ide.gui.menu.TextMenuBar;
+import com.adiro.nasm_ide.gui.menubar.IconMenuBar;
+import com.adiro.nasm_ide.gui.menubar.textmenu.TextMenuBar;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -22,7 +22,7 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
 
     	var contentView = new ContentView();    	
-    	var textMenu = new TextMenuBar();
+    	var textMenu = new TextMenuBar(contentView, stage);
     	var topMenu = new IconMenuBar(contentView, stage);
     	var layout = new VBox(textMenu, topMenu, contentView);
 

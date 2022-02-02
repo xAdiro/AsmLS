@@ -5,14 +5,21 @@ import java.io.File;
 import java.io.*;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.text.MessageFormat;
+import java.util.Arrays;
+import java.util.List;
 import java.util.regex.Pattern;
 
 public final class DebugFileCreator {
 		
-		public static void createDebugFile(String sourceFilePath) {
+		private static void createDebugFile(String sourceFilePath) {
 			var outputContent = "";
-			var debugFilePath = getFileDirectory(sourceFilePath) + "/runDebug.asm";
+			var debugFilePath = getFileDirectory(sourceFilePath) + "/debug/runDebug.asm";
 			
 			BufferedReader reader;
 			try {
@@ -77,8 +84,41 @@ public final class DebugFileCreator {
 			System.out.println("[INFO] Generated debug file: " + debugFilePath);
 		}
 		
+		private static void copyDebugLibrary(String sourceDirPath) {
+			Path debugLibrary = Paths.get("resources/files/debug.asm");
+			Path destination = Paths.get(sourceDirPath +"/debug/debug.asm");
 			
-		private static String fixLoop(String line) {
+			try {
+				Files.copy(debugLibrary, destination, StandardCopyOption.REPLACE_EXISTING);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		public static void createRunFile(String sourceFilePath) {
+			var sourceDirPath = getFileDirectory(sourceFilePath);
+			new File(sourceDirPath + "/debug").mkdirs();
+			createDebugFile(sourceFilePath);
+			copyDebugLibrary(sourceDirPath);
+			
+			List<String> runFileContent = 
+					Arrays.asList(
+							"cd debug\n"
+							+ "a:\\nasm\\nasm -o program.com -f bin runDebug.asm\n"
+							+ "del *.log\n"
+							+ "program.com\n"
+							+ "cd ..");
+		
+			Path runFilePath = Paths.get(sourceDirPath+"/debug.bat");
+			try {
+				Files.write(runFilePath, runFileContent, StandardCharsets.UTF_8);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			
+		}
+		
+ 		private static String fixLoop(String line) {
 			
 			String regexLoop = "loop.*";
 			var loopPattern = Pattern.compile(regexLoop);

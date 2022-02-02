@@ -13,7 +13,7 @@ public class LogReader {
 	RegistersView registers;
 	CodeView sourceArea;
 	int currentStep = 0;
-	private String filePrefix = "/home/adrian/Dokumenty/Dos/ide/debug/";
+	private String filePrefix = "/home/adrian/Dokumenty/Dos/ide/na pozniej/debug/";
 	
 	public LogReader(RegistersView registers, CodeView sourceArea) {
 		this.registers = registers;

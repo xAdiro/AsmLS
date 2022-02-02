@@ -1,6 +1,6 @@
-package com.adiro.nasm_ide.gui.menu;
+package com.adiro.nasm_ide.gui.menubar;
 
-import com.adiro.nasm_ide.gui.button.ChangeSourceFileButton;
+import com.adiro.nasm_ide.gui.button.GenerateDebugFileButton;
 import com.adiro.nasm_ide.gui.button.MoveBackButton;
 import com.adiro.nasm_ide.gui.button.MoveNextButton;
 import com.adiro.nasm_ide.gui.button.MoveToEndButton;
@@ -9,7 +9,6 @@ import com.adiro.nasm_ide.gui.content.ContentView;
 
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
-import javafx.scene.control.Separator;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -19,7 +18,7 @@ public class IconMenuBar extends VBox{
 	public IconMenuBar(ContentView contentView, Stage stage) {
 		super();
 		
-		var b1 = new ChangeSourceFileButton(contentView, stage);
+		var b1 = new GenerateDebugFileButton();
 		var b2 = new MoveToStartButton(contentView);
 		var b3 = new MoveBackButton(contentView);
 		var b4 = new MoveNextButton(contentView);
@@ -31,7 +30,7 @@ public class IconMenuBar extends VBox{
 		setSpacing(5);
 		
 		
-		getChildren().addAll(buttons, new Separator());
+		getChildren().addAll(buttons);
 	}
 	
 	private class ButtonSet extends HBox{
