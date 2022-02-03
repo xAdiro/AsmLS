@@ -1,24 +1,19 @@
 package com.adiro.nasm_ide.gui.button;
 
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-
-import com.adiro.nasm_ide.gui.content.ContentView;
 import com.adiro.nasm_ide.logic.DebugFileCreator;
-
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.scene.control.Tooltip;
 import javafx.scene.image.ImageView;
-import javafx.stage.FileChooser;
-import javafx.stage.Stage;
 
 public class GenerateDebugFileButton extends StyledButton{
 	public GenerateDebugFileButton() {
 		super(new ImageView("file:resources/icons/refresh.png"));
+		setTooltip(new Tooltip("Generate new run file"));
 		
 		this.setOnAction(new EventHandler<ActionEvent> () {
 			@Override public void handle(ActionEvent e) {

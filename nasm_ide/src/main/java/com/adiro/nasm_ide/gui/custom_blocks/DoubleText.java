@@ -1,5 +1,7 @@
 package com.adiro.nasm_ide.gui.custom_blocks;
 
+import com.adiro.nasm_ide.gui.GuiColors;
+
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
@@ -11,6 +13,7 @@ public class DoubleText extends HBox{
 		super();
 		var labelText = new Text(label);
 		labelText.setFont(Font.font("Arial", FontPosture.REGULAR, fontSize));
+		labelText.setFill(GuiColors.TEXT);
 		var labelBox = new HBox(labelText);
 		labelBox.setMinWidth(fontSize*2.5);
 		getChildren().add(labelBox);
@@ -18,6 +21,7 @@ public class DoubleText extends HBox{
 		
 		this.value = new Text(value);
 		this.value.setFont(Font.font("Arial", FontPosture.REGULAR, fontSize));
+		this.value.setFill(GuiColors.TEXT);
 		getChildren().add(this.value);
 		
 	}

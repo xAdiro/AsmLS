@@ -2,11 +2,14 @@ package com.adiro.nasm_ide.gui.button;
 
 import com.adiro.nasm_ide.gui.content.ContentView;
 
+import javafx.scene.control.Tooltip;
+
 public class MoveManyBackButton extends MoveBackButton{
 	
 	public MoveManyBackButton(ContentView contentView) {
 		super(contentView);
 		setText("<<");
+		setTooltip(new Tooltip("Move 10 lines backwards"));
 	}
 
 	

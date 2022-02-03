@@ -11,14 +11,28 @@ import com.adiro.nasm_ide.logic.DebugFileCreator;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Insets;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-
+import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.paint.Color;
 
 class FileSubMenu extends MenuItem{
 	public FileSubMenu(ContentView contentView, Stage stage){
-		super("Open new file");
+		super();
+		
+		Label label = new Label("Open new file");
+		label.setTextFill(Color.BLACK);
+		label.setBackground(new Background(
+    			new BackgroundFill(
+    					Color.TRANSPARENT, null, null)));
+		label.setPadding(new Insets(0));
+		setGraphic(label);
+		
+		
 		setOnAction(new EventHandler<ActionEvent> () {
 			@Override public void handle(ActionEvent e) {
 				changeFile(contentView, stage);

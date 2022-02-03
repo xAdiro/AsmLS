@@ -1,9 +1,12 @@
 package com.adiro.nasm_ide.gui.content;
 
 
+import com.adiro.nasm_ide.gui.GuiColors;
 import com.adiro.nasm_ide.gui.custom_blocks.DoubleText;
 import javafx.geometry.Insets;
 import javafx.scene.control.Separator;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
@@ -17,6 +20,9 @@ public class RegistersView extends VBox{
 
 	public RegistersView() {
 		super();
+		setBackground(new Background(
+    			new BackgroundFill(
+    					GuiColors.BACKGROUND2, null, null)));
 		
 		ax = new StandardRegister(" A");
 		bx = new StandardRegister(" B");
@@ -35,6 +41,8 @@ public class RegistersView extends VBox{
 		getChildren().add(dx);
 		getChildren().add(new Separator());
 		getChildren().add(flags);
+		
+		
 	}
 	
 	public void setAx(int newValue) {

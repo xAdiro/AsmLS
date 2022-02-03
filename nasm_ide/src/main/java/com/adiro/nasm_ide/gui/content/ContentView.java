@@ -6,6 +6,7 @@ import com.adiro.nasm_ide.gui.content.codeview.CodeView;
 import com.adiro.nasm_ide.logic.LogReader;
 
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
 
 public class ContentView extends HBox{
 	
@@ -16,6 +17,8 @@ public class ContentView extends HBox{
 		public ContentView() {
 			
 			super();
+			HBox.setHgrow(this, Priority.ALWAYS);
+			setMaxWidth(Double.MAX_VALUE);
 			
 			this.registersView = new RegistersView();
 			this.scView = new CodeView();

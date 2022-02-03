@@ -1,5 +1,9 @@
 package com.adiro.nasm_ide.gui.content.codeview;
 
+import com.adiro.nasm_ide.gui.GuiColors;
+
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderStroke;
 import javafx.scene.layout.BorderStrokeStyle;
@@ -15,21 +19,23 @@ class LineCounter extends VBox{
 	
 	public LineCounter(int numberOfLines) {
 		super();
+		setBackground(new Background(
+    			new BackgroundFill(
+    					GuiColors.BACKGROUND1, null, null)));
 		
 		for(int i = 1; i<=numberOfLines;i++) {
 			
 			getChildren().add(new LineText(i));
-			System.out.println("dodaje: " + i);
 		}
 		this.numberOfLines = numberOfLines;
 		
 		
     	setBorder(new Border(
     			new BorderStroke(
-    					Color.GRAY, 
+    					Color.DARKGREY, 
     					BorderStrokeStyle.SOLID, 
     					null, 
-    					new BorderWidths(0,1,0,0))));
+    					new BorderWidths(0,5,0,0))));
 	}
 	
 	public void setLineNumber(int newValue) {
@@ -52,9 +58,9 @@ class LineCounter extends VBox{
 	
 	private class LineText extends Text{
 		public LineText(int number) {
-			super(Integer.toString(number));
-			setFont(Font.font("Arial", FontPosture.REGULAR, 20));
-			setFill(Color.GRAY);
+			super(Integer.toString(number) + " "); // lazy margin
+			setFont(Font.font("Noto Sans Mono", FontPosture.REGULAR, 20));
+			setFill(GuiColors.TEXT2);
 		}
 	}
 }

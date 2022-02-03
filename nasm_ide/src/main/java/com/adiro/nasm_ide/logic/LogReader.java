@@ -11,13 +11,13 @@ import com.adiro.nasm_ide.gui.content.codeview.CodeView;
 public class LogReader {
 	
 	RegistersView registers;
-	CodeView sourceArea;
+	CodeView code;
 	int currentStep = 0;
 	private String filePrefix = "/home/adrian/Dokumenty/Dos/ide/na pozniej/debug/";
 	
 	public LogReader(RegistersView registers, CodeView sourceArea) {
 		this.registers = registers;
-		this.sourceArea = sourceArea;
+		this.code = sourceArea;
 	}
 	
 	public boolean nextLine(){
@@ -28,13 +28,13 @@ public class LogReader {
 		try {
 			step = Files.readAllBytes(path);
 		} catch (IOException e) {
-			sourceArea.haltLine(sourceArea.getCurrentLine()+1);
+			code.haltLine(code.getCurrentLine()+1);
 			return false;
 		}
 		currentStep++;
 		
 		
-		sourceArea.goToLine(readRegister(step, 0));
+		code.goToLine(readRegister(step, 0));
 		setRegisters(step);
 		registers.setFlags(readRegister(step, 9));
 		

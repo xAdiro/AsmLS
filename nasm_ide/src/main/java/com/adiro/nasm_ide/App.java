@@ -27,7 +27,9 @@ public class App extends Application {
     	var layout = new VBox(textMenu, topMenu, contentView);
 
         var scene = new Scene(new StackPane(layout), 1366, 768);
+        scene.getStylesheets().add(getClass().getResource("/style.css").toExternalForm());
         stage.setScene(scene);
+        stage.setTitle("ASMLS");
         stage.show();
     }
 
