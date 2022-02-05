@@ -4,4 +4,6 @@ After picking your assembly file it will generate debug.bat next to it that you 
 
 It assumes you have a nasm compiler at a:/nasm/nasm.exe (otherwise you have to change it in debug.bat)
 
+### Requires java 11 or higher
+
 <img src="https://raw.githubusercontent.com/xAdiro/ASMLS/main/asmls.png"></img>
