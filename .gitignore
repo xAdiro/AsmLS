@@ -1,6 +1,7 @@
-.*
-.*/**
-asmls.iml
-!.idea/artifacts/**
-out/**
-target/**
+/.source
+/.hello.txt
+/.idea
+!/.idea/artifacts/**
+/asmls.iml
+/out/**
+/target/**
