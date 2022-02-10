@@ -1,6 +1,6 @@
 .*
 .*/**
 asmls.iml
-!.idea/artifacts
+!.idea/artifacts/**
 out/**
 target/**
