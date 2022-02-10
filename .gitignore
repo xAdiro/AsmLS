@@ -1,3 +1,6 @@
-\.metadata/**
-nasm_ide/javafx/**
-nasm_ide/resources/locations/*
+.*
+.*/**
+asmls.iml
+!.idea/artifacts
+out/**
+target/**
