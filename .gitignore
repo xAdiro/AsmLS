@@ -1,7 +1,8 @@
 /.source
 /.hello.txt
-/.idea
-!/.idea/artifacts/**
+/.idea/*
+!/.idea/artifacts
 /asmls.iml
 /out/**
 /target/**
+/asmls.png
