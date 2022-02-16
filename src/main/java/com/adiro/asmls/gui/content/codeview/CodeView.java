@@ -1,19 +1,10 @@
 package com.adiro.asmls.gui.content.codeview;
 
 import java.io.*;
-import java.net.JarURLConnection;
-import java.net.MalformedURLException;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import com.adiro.asmls.App;
-import com.adiro.asmls.HelloApplication;
 import com.adiro.asmls.gui.GuiColors;
 
 import javafx.geometry.Insets;

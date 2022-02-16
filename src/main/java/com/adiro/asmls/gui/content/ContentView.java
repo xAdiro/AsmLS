@@ -3,6 +3,7 @@ package com.adiro.asmls.gui.content;
 import java.io.File;
 import com.adiro.asmls.gui.content.codeview.CodeView;
 import com.adiro.asmls.logic.LogReader;
+import javafx.beans.NamedArg;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 

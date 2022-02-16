@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Separator?>
+<?import com.adiro.asmls.gui.menubar.textmenu.TextMenuBar?>
+<?import com.adiro.asmls.gui.menubar.textmenu.FileSubMenu?>
+<?import com.adiro.asmls.gui.button.*?>
+<?import com.adiro.asmls.gui.content.codeview.LineCounter?>
+<?import com.adiro.asmls.gui.content.codeview.CodeView?>
+<?import com.adiro.asmls.gui.content.RegistersView?>
+<?import com.adiro.asmls.gui.content.ContentView?>
+<VBox fx:controller="com.adiro.asmls.FxmlController"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:id="mainBox">
+<!--          stylesheets="/com/adiro/asmls/fxml/style.css">-->
+
+    <MenuBar maxHeight="100">
+        <Menu text="File">
+            <FileSubMenu/>
+        </Menu>
+        <Menu text="Edit"/>
+        <Menu text="Settings"/>
+    </MenuBar>
+    <HBox>
+<!--        <MoveToStartButton fx:id="moveToStartButton"/>-->
+<!--        <MoveManyBackButton fx:id="moveManyBackButton"/>-->
+<!--        <MoveBackButton fx:id="moveBackButton"/>-->
+        <MoveNextButton fx:id="moveNextButton"/>
+<!--        <MoveManyNextButton fx:id="moveManyNextButton"/>-->
+<!--        <MoveToEndButton fx:id="moveToEndButton"/>-->
+<!--        <RefreshButton fx:id="refreshButton"/>-->
+    </HBox>
+    <ContentView fx:id="contentView"/>
+
+</VBox>

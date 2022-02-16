@@ -1,20 +1,13 @@
 package com.adiro.asmls.gui.content.codeview;
 
 import com.adiro.asmls.gui.GuiColors;
-
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.Border;
-import javafx.scene.layout.BorderStroke;
-import javafx.scene.layout.BorderStrokeStyle;
-import javafx.scene.layout.BorderWidths;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.Text;
 
-class LineCounter extends VBox{
+public class LineCounter extends VBox{
     private int numberOfLines;
 
     public LineCounter(int numberOfLines) {

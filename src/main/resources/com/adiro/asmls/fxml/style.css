@@ -1,0 +1,14 @@
+MenuBar{
+    -fx-min-width: infinity;
+    -fx-padding: 0px;
+}
+HBox, VBox, .menu-item, .menu-button, .context-menu{
+    -fx-background-color: #1C1F22;
+
+}
+.menu .label{
+    -fx-text-fill: #cccccc;
+}
+
+
+

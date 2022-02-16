@@ -7,6 +7,7 @@ import com.adiro.asmls.App;
 import com.adiro.asmls.gui.content.ContentView;
 import com.adiro.asmls.logic.DebugFileCreator;
 
+import javafx.beans.NamedArg;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -18,8 +19,9 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.paint.Color;
 
-class FileSubMenu extends MenuItem{
-    public FileSubMenu(ContentView contentView, Stage stage){
+public class FileSubMenu extends MenuItem{
+
+    public FileSubMenu(@NamedArg("contentView") ContentView contentView, @NamedArg("stage") Stage stage){
         super();
 
         Label label = new Label("Open new file");
@@ -31,12 +33,9 @@ class FileSubMenu extends MenuItem{
         setGraphic(label);
 
 
-        setOnAction(new EventHandler<ActionEvent> () {
-            @Override public void handle(ActionEvent e) {
-                changeFile(contentView, stage);
-            }
-        });
+        setOnAction(e -> changeFile(contentView, stage));
     }
+
 
     private void changeFile(ContentView contentView, Stage stage) {
 
