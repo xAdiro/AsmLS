@@ -10,7 +10,6 @@ It assumes you have a nasm compiler at a:/nasm/nasm.exe (otherwise you have to c
 3. Run debug.but and after it ends proceed to ASMLS window
 4. You can now use arrows to navigate through lines
 5. If you make changes to your assembly file click refresh button to generate new debug.bat with newest code
-6. (BUG) You have to repeat step 1 in order to see changes in your ASMLS code preview.
 
 ### Requires java 11 or higher
 
