@@ -16,25 +16,26 @@ import javafx.stage.Stage;
 public class FxmlController {
 
     @FXML
-    ContentView contentView;
+    private ContentView contentView;
     @FXML
-    MoveToStartButton moveToStartButton;
+    private MoveToStartButton moveToStartButton;
     @FXML
-    MoveManyBackButton moveManyBackButton;
+    private MoveManyBackButton moveManyBackButton;
     @FXML
-    MoveBackButton moveBackButton;
+    private MoveBackButton moveBackButton;
     @FXML
-    MoveNextButton moveNextButton;
+    private MoveNextButton moveNextButton;
     @FXML
-    MoveManyNextButton moveManyNextButton;
+    private MoveManyNextButton moveManyNextButton;
     @FXML
-    MoveToEndButton moveToEndButton;
+    private MoveToEndButton moveToEndButton;
     @FXML
-    RefreshButton refreshButton;
+    private RefreshButton refreshButton;
     @FXML
-    FileSubMenu fileSubMenu;
+    private FileSubMenu fileSubMenu;
     @FXML
-    VBox mainBox;
+    private VBox mainBox;
+    @FXML
     private Stage stage;
 
     public FxmlController(){
@@ -47,18 +48,18 @@ public class FxmlController {
         mainBox = new VBox();
         //Platform.runLater(this::loadStage);
         contentView = new ContentView();
-        fileSubMenu = new FileSubMenu(contentView, stage);
-
-        moveToStartButton = new MoveToStartButton(contentView);
-        moveManyBackButton = new MoveManyBackButton(contentView);
-        moveBackButton = new MoveBackButton(contentView);
-        moveNextButton = new MoveNextButton(contentView);
-        moveManyNextButton = new MoveManyNextButton(contentView);
-        moveToEndButton = new MoveToEndButton(contentView);
-        refreshButton = new RefreshButton(contentView);
+//        fileSubMenu = new FileSubMenu(contentView, stage);
+//
+//        moveToStartButton = new MoveToStartButton(contentView);
+//        moveManyBackButton = new MoveManyBackButton(contentView);
+//        moveBackButton = new MoveBackButton(contentView);
+//        moveNextButton = new MoveNextButton(contentView);
+        //moveManyNextButton = new MoveManyNextButton(contentView);
+//        moveToEndButton = new MoveToEndButton(contentView);
+//        refreshButton = new RefreshButton(contentView);
     }
 
-//    private void loadStage(){
-//        stage = (Stage)mainBox.getScene().getWindow();
-//    }
+    public void setStage(Stage stage){
+        this.stage = stage;
+    }
 }

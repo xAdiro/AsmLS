@@ -19,27 +19,35 @@
 <?import com.adiro.asmls.gui.content.codeview.CodeView?>
 <?import com.adiro.asmls.gui.content.RegistersView?>
 <?import com.adiro.asmls.gui.content.ContentView?>
+<?import javafx.stage.Stage?>
 <VBox fx:controller="com.adiro.asmls.FxmlController"
       xmlns:fx="http://javafx.com/fxml"
       fx:id="mainBox">
 <!--          stylesheets="/com/adiro/asmls/fxml/style.css">-->
 
+    <fx:define>
+        <ContentView fx:id="contentView"/>
+        <Stage fx:id="stage"/>
+    </fx:define>
+
     <MenuBar maxHeight="100">
         <Menu text="File">
-            <FileSubMenu/>
+            <FileSubMenu contentView="$contentView" stage="$stage"/>
         </Menu>
         <Menu text="Edit"/>
         <Menu text="Settings"/>
     </MenuBar>
     <HBox>
-<!--        <MoveToStartButton fx:id="moveToStartButton"/>-->
-<!--        <MoveManyBackButton fx:id="moveManyBackButton"/>-->
-<!--        <MoveBackButton fx:id="moveBackButton"/>-->
-        <MoveNextButton fx:id="moveNextButton"/>
-<!--        <MoveManyNextButton fx:id="moveManyNextButton"/>-->
-<!--        <MoveToEndButton fx:id="moveToEndButton"/>-->
-<!--        <RefreshButton fx:id="refreshButton"/>-->
+        <MoveToStartButton fx:id="moveToStartButton" contentView="$contentView"/>
+        <MoveManyBackButton fx:id="moveManyBackButton" contentView="$contentView"/>
+        <MoveBackButton fx:id="moveBackButton" contentView="$contentView"/>
+        <MoveNextButton fx:id="moveNextButton" contentView="$contentView"/>
+        <MoveManyNextButton fx:id="moveManyNextButton" contentView="$contentView"/>
+        <MoveToEndButton fx:id="moveToEndButton" contentView="$contentView"/>
+        <RefreshButton fx:id="refreshButton" contentView="$contentView"/>
     </HBox>
-    <ContentView fx:id="contentView"/>
+    <fx:reference source="contentView"/>
+
+
 
 </VBox>

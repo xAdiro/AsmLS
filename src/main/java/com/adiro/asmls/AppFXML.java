@@ -12,6 +12,7 @@ public class AppFXML extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(AppFXML.class.getResource("fxml/index.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1366, 768);
+        ((FxmlController)fxmlLoader.getController()).setStage(stage);
         scene.getStylesheets().add(getClass().getResource("fxml/style.css").toExternalForm());
         scene.getStylesheets().add(getClass().getResource("styles/scrollbarstyle.css").toExternalForm());
         stage.setTitle("AsmLS");
