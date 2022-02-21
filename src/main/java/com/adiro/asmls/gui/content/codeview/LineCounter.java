@@ -12,9 +12,9 @@ public class LineCounter extends VBox{
 
     public LineCounter(int numberOfLines) {
         super();
-        setBackground(new Background(
-                new BackgroundFill(
-                        GuiColors.BACKGROUND1, null, null)));
+//        setBackground(new Background(
+//                new BackgroundFill(
+//                        GuiColors.BACKGROUND1, null, null)));
 
         for(int i = 1; i<=numberOfLines;i++) {
 
@@ -53,7 +53,6 @@ public class LineCounter extends VBox{
         public LineText(int number) {
             super(Integer.toString(number) + " "); // lazy margin
             setFont(Font.font("Noto Sans Mono", FontPosture.REGULAR, 20));
-            setFill(GuiColors.TEXT2);
         }
     }
 }

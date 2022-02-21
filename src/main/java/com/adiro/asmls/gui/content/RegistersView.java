@@ -2,10 +2,7 @@ package com.adiro.asmls.gui.content;
 
 import com.adiro.asmls.gui.GuiColors;
 import com.adiro.asmls.gui.custom_blocks.DoubleText;
-import javafx.geometry.Insets;
 import javafx.scene.control.Separator;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
@@ -19,9 +16,9 @@ public class RegistersView extends VBox{
 
     public RegistersView() {
         super();
-        setBackground(new Background(
-                new BackgroundFill(
-                        GuiColors.BACKGROUND2, null, null)));
+//        setBackground(new Background(
+//                new BackgroundFill(
+//                        GuiColors.BACKGROUND2, null, null)));
 
         ax = new StandardRegister(" A");
         bx = new StandardRegister(" B");
@@ -130,7 +127,7 @@ public class RegistersView extends VBox{
             for(var flag : flags) {
                 getChildren().add(flag);
             }
-            VBox.setMargin(this, new Insets(0,0,0,10));
+            //VBox.setMargin(this, new Insets(0,0,0,10));
 
         }
 

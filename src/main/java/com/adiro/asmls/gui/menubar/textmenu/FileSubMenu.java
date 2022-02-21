@@ -25,11 +25,6 @@ public class FileSubMenu extends MenuItem{
         super();
 
         Label label = new Label("Open new file");
-        label.setTextFill(Color.BLACK);
-        label.setBackground(new Background(
-                new BackgroundFill(
-                        Color.TRANSPARENT, null, null)));
-        label.setPadding(new Insets(0));
         setGraphic(label);
 
 

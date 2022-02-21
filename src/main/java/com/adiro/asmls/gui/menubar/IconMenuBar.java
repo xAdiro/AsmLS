@@ -12,8 +12,6 @@ import com.adiro.asmls.gui.content.ContentView;
 
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -36,11 +34,11 @@ public class IconMenuBar extends VBox{
         getChildren().addAll(buttons);
 
 
-        setPadding(new Insets(5));
-        setBackground(
-                new Background(
-                        new BackgroundFill(
-                                GuiColors.BACKGROUND2,null,null)));
+//        setPadding(new Insets(5));
+//        setBackground(
+//                new Background(
+//                        new BackgroundFill(
+//                                GuiColors.BACKGROUND2,null,null)));
     }
 
     private class ButtonSet extends HBox{

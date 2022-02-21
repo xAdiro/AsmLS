@@ -11,8 +11,6 @@ import com.adiro.asmls.logic.DebugFileCreator;
 import com.adiro.asmls.logic.StartFilesCreator;
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -35,9 +33,9 @@ public class App extends Application {
 
         StackPane stackPane = new StackPane(layout);
 
-        stackPane.setBackground(new Background(
-                new BackgroundFill(
-                        GuiColors.BACKGROUND2, null, null)));
+//        stackPane.setBackground(new Background(
+//                new BackgroundFill(
+//                        GuiColors.BACKGROUND2, null, null)));
 
         var scene = new Scene(stackPane, 1366, 768);
         scene.getStylesheets().add(getClass().getResource("styles/scrollbarstyle.css").toExternalForm());

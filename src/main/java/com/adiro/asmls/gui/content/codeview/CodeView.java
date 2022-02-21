@@ -8,9 +8,7 @@ import java.util.Scanner;
 import com.adiro.asmls.gui.GuiColors;
 
 import javafx.geometry.Insets;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.CornerRadii;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
@@ -18,7 +16,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 
-public class CodeView extends StyledScrollPane {
+public class CodeView extends ScrollPane {
 
     private List<TextLine> sourceCode;
     private int currentLine = 0;
@@ -31,9 +29,9 @@ public class CodeView extends StyledScrollPane {
 
         code = new VBox();
         code.setMinWidth(Integer.MAX_VALUE);
-        code.setBackground(new Background(
-                new BackgroundFill(
-                        GuiColors.BACKGROUND1, null, null)));
+//        code.setBackground(new Background(
+//                new BackgroundFill(
+//                        GuiColors.BACKGROUND1, null, null)));
 
 
         sourceCodePath = getPrevLocation();
@@ -119,7 +117,6 @@ public class CodeView extends StyledScrollPane {
         while(scanner.hasNextLine()) {
             var line = new Text(scanner.nextLine());
             line.setFont(Font.font("Noto Sans Mono", 20));
-            line.setFill(GuiColors.TEXT);
 
             var textLine = new TextLine(line);
             sourceCode.add(textLine);
@@ -137,20 +134,22 @@ public class CodeView extends StyledScrollPane {
     }
 
     private void clearColors() {
-        for(var line : sourceCode) {
-            line.setBackground(
-                    new Background(
-                            new BackgroundFill(
-                                    Color.TRANSPARENT, CornerRadii.EMPTY, Insets.EMPTY)));
-        }
+//        for(var line : sourceCode) {
+//            line.setBackground(
+//                    new Background(
+//                            new BackgroundFill(
+//                                    Color.TRANSPARENT, CornerRadii.EMPTY, Insets.EMPTY)));
+//        }
+        //TODO: change it to use css somehow
     }
 
     private void colorLine(int n, Color color) {
         clearColors();
-        sourceCode.get(n).setBackground(
-                new Background(
-                        new BackgroundFill(
-                                color, CornerRadii.EMPTY, Insets.EMPTY)));
+//        sourceCode.get(n).setBackground(
+//                new Background(
+//                        new BackgroundFill(
+//                                color, CornerRadii.EMPTY, Insets.EMPTY)));
+        //TODO: use css somehow
     }
 
     public String getPrevLocation() {
@@ -181,17 +180,17 @@ public class CodeView extends StyledScrollPane {
 
             super(text);
             this.text = text;
-            setPadding(new Insets(0));
+            //setPadding(new Insets(0));
 
         }
 
         @SuppressWarnings("unused")
-        public void setBackgroundColor(Color color) {
-            setBackground(
-                    new Background(
-                            new BackgroundFill(
-                                    color, CornerRadii.EMPTY, Insets.EMPTY)));
-        }
+//        public void setBackgroundColor(Color color) {
+//            setBackground(
+//                    new Background(
+//                            new BackgroundFill(
+//                                    color, CornerRadii.EMPTY, Insets.EMPTY)));
+//        } TODO: use css somehow
 
         public String getText() {
             return text.getText();

@@ -26,12 +26,8 @@ abstract class StyledButton extends Button {
     }
 
     private void setCustomStyle() {
-        setPadding(new Insets(0));
-        setSize(30 ,30);
-
-//		setBackground(new Background(
-//    			new BackgroundFill(
-//    					GuiColors.ICONBUTTON, null, null)));
+//        setPadding(new Insets(0));
+//        setSize(30 ,30);
 
     }
 
