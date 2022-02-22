@@ -5,12 +5,45 @@
     error: rgba(255,0,0,0.2);
     generic-text: #cccccc;
     second-text: #8c8c8c;
+    menu-background: rgba(0, 0, 0, 0.1);
+    lit-button: radial-gradient(radius 180%, rgba(255,255,255,0.1), transparent);
+    lit-text: white;
+    pressed-button: radial-gradient(radius 180%, rgba(255,255,255,0.3), transparent);
+    generic-border: rgba(0, 128, 128, 0.2);
     -fx-background-color: generic-background;
+    -fx-accent: transparent;
 }
 
-.menu-item, .menu-button, .context-menu, .menu, .label{
+ .context-menu{
     -fx-background-color: generic-background;
 }
 .label, .menu{
     -fx-text-fill: generic-text;
+}
+.menu-bar, .icon-menu-bar{
+    -fx-background-color: menu-background;
+}
+.icon-menu-bar{
+    -fx-border-color: generic-border;
+    -fx-border-width: 1;
+    -fx-border-style: hidden hidden solid hidden;
+}
+
+.menu-button:hover{
+    -fx-background-color: lit-button;
+}
+.menu-button:pressed{
+    -fx-background-color: pressed-button;
+}
+.menu-button:hover .label{
+    -fx-text-fill: lit-text;
+}
+.context-menu .menu-item:hover{
+    -fx-background-color: lit-button;
+}
+.context-menu .menu-item:pressed{
+    -fx-background-color: pressed-button;
+}
+.context-menu .menu-item:hover .label{
+    -fx-text-fill: lit-text;
 }

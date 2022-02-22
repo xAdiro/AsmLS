@@ -22,7 +22,7 @@ public class IconMenuBar extends VBox{
 
     public IconMenuBar(ContentView contentView, Stage stage) {
         super();
-
+        getStyleClass().add("icon-menu-bar");
         var buttons = new ButtonSet(
                 new MoveToStartButton(contentView),
                 new MoveManyBackButton(contentView),
