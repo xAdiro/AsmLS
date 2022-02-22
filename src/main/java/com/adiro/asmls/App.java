@@ -47,7 +47,7 @@ public class App extends Application {
         scene.getStylesheets().add(getClass().getResource("styles/scrollbarstyle.css").toExternalForm());
         scene.getStylesheets().add(getClass().getResource("styles/common-styles.css").toExternalForm());
         stage.setScene(scene);
-        stage.setTitle("ASMLS");
+        stage.setTitle("AsmLs");
         stage.show();
     }
 

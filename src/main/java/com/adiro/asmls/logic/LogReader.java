@@ -40,7 +40,7 @@ public class LogReader {
             e.printStackTrace();
             return;
         }
-        currentStep = 0;
+        currentStep = 1;
 
         code.goToLine(readRegister(step, 0));
         setRegisters(step);
@@ -59,27 +59,30 @@ public class LogReader {
         nextLine();
     }
 
-    public boolean nextLine(){
+    public void nextLine(){
 
         byte[] step = null;
         try {
             Path path = Paths.get(getFileName());
             step = Files.readAllBytes(path);
         } catch (IOException e) {
-            code.haltLine(code.getCurrentLine()+1);
-            return false;
+            currentStep--;
+            Path previousFile = Paths.get(getFileName());
+            if(Files.exists(previousFile)){
+                currentStep+=2;
+                code.goToNextLine();
+                code.haltLine(code.getCurrentLine());
+            }
+            else{
+                currentStep++;
+            }
+            return;
         }
         currentStep++;
-
 
         code.goToLine(readRegister(step, 0));
         setRegisters(step);
         registers.setFlags(readRegister(step, 9));
-
-
-
-
-        return true;
     }
 
     public boolean prevLine() {

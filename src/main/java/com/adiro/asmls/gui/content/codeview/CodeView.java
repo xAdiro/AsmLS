@@ -41,21 +41,20 @@ public class CodeView extends StyledScrollPane {
         setContent(layout);
     }
 
-    public boolean goToNextLine() {
+    public void goToNextLine() {
 
         do {
             if(currentLine < sourceCode.size() - 1) {
                 currentLine++;
             }
             else {
-                return false;
+                return;
             }
         }
         while(sourceCode.get(currentLine).getText().isBlank());
 
 
         colorLine(currentLine, GuiColors.LINEPASSED);
-        return true;
     }
 
     public boolean goToLine(int index) {

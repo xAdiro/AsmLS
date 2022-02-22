@@ -37,8 +37,8 @@ public class ContentView extends HBox{
         logReader.goToLastLine();
     }
 
-    public boolean nextLine() {
-        return logReader.nextLine();
+    public void nextLine() {
+        logReader.nextLine();
     }
 
     public boolean prevLine() {
