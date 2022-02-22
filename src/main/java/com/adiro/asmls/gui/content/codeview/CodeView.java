@@ -8,11 +8,7 @@ import java.util.Scanner;
 import com.adiro.asmls.gui.GuiColors;
 
 import javafx.geometry.Insets;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.CornerRadii;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
@@ -30,10 +26,10 @@ public class CodeView extends StyledScrollPane {
         super();
 
         code = new VBox();
-        code.setMinWidth(Integer.MAX_VALUE);
         code.setBackground(new Background(
                 new BackgroundFill(
                         GuiColors.BACKGROUND1, null, null)));
+        HBox.setHgrow(code, Priority.ALWAYS);
 
 
         sourceCodePath = getPrevLocation();

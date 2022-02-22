@@ -13,6 +13,7 @@ public class StyledScrollPane extends ScrollPane{
         super();
         setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
         setFitToWidth(true);
+        setFitToHeight(true);
         setPadding(new Insets(0));
 
         setBackground(new Background(

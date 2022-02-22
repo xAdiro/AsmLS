@@ -6,6 +6,7 @@ import com.adiro.asmls.logic.LogReader;
 import javafx.beans.NamedArg;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
+import javafx.scene.layout.VBox;
 
 public class ContentView extends HBox{
 
@@ -16,11 +17,14 @@ public class ContentView extends HBox{
     public ContentView() {
 
         super();
-        HBox.setHgrow(this, Priority.ALWAYS);
         setMaxWidth(Double.MAX_VALUE);
+        setMaxHeight(Double.MAX_VALUE);
+        VBox.setVgrow(this, Priority.ALWAYS);
 
        registersView = new RegistersView();
         codeView = new CodeView();
+        HBox.setHgrow(codeView, Priority.ALWAYS);
+        VBox.setVgrow(codeView, Priority.ALWAYS);
         logReader = new LogReader(registersView, codeView);
 
         getChildren().addAll(codeView, registersView);
