@@ -1,0 +1,16 @@
+.root{
+    generic-background: #262626;
+    second-background: #1C1F22;
+    succes: rgba(0, 204, 0, 0.2);
+    error: rgba(255,0,0,0.2);
+    generic-text: #cccccc;
+    second-text: #8c8c8c;
+    -fx-background-color: generic-background;
+}
+
+.menu-item, .menu-button, .context-menu, .menu, .label{
+    -fx-background-color: generic-background;
+}
+.label, .menu{
+    -fx-text-fill: generic-text;
+}
