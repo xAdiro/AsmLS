@@ -51,5 +51,10 @@
 .button{
     -fx-background-color: transparent;
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 3, 0);
-    -fx-background-radius: 20;
+}
+.button:hover{
+    -fx-background-color: lit-button;
+}
+.button:pressed{
+    -fx-background-color: pressed-button;
 }
