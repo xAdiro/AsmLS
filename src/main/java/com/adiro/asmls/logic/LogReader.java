@@ -4,6 +4,7 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Objects;
 
 import com.adiro.asmls.App;
 import com.adiro.asmls.gui.content.RegistersView;
@@ -47,28 +48,15 @@ public class LogReader {
     }
 
     public void goToLastLine(){
-        byte[] step = null;
-        Path path = null;
-        while(true){
-            Path checkedPath = Paths.get(getFileName());
-            if(!Files.exists(checkedPath)){
-                break;
-            }
-            path = checkedPath;
+        Path checkedPath = null;
+        do{
             currentStep++;
-        }
-        if(path == null) return; // already at last line
+            checkedPath = Paths.get(getFileName());
+        }while(Files.exists(checkedPath));
 
-        try {
-            step = Files.readAllBytes(path);
-        } catch (IOException e) {
-            code.haltLine(code.getCurrentLine()+1);
-            return;
-        }
-
-        code.goToLine(readRegister(step, 0));
-        setRegisters(step);
-        registers.setFlags(readRegister(step, 9));
+        currentStep--;
+        nextLine();
+        nextLine();
     }
 
     public boolean nextLine(){
