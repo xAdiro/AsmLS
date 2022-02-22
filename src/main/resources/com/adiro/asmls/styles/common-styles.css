@@ -47,3 +47,9 @@
 .context-menu .menu-item:hover .label{
     -fx-text-fill: lit-text;
 }
+
+.button{
+    -fx-background-color: transparent;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 3, 0);
+    -fx-background-radius: 20;
+}
