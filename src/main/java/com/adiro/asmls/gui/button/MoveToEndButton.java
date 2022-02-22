@@ -21,9 +21,7 @@ public class MoveToEndButton extends StyledButton{
 
     private void moveToEnd(ContentView contentView) {
 
-        while(contentView.nextLine()) {
-
-        }
+        contentView.lastLine();
     }
 
 }

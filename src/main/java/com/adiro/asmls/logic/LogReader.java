@@ -30,6 +30,46 @@ public class LogReader {
         }
 
     }
+    public void goToFirstLine(){
+        byte[] step = null;
+        try {
+            Path path = Paths.get(getFileName(0));
+            step = Files.readAllBytes(path);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return;
+        }
+        currentStep = 0;
+
+        code.goToLine(readRegister(step, 0));
+        setRegisters(step);
+        registers.setFlags(readRegister(step, 9));
+    }
+
+    public void goToLastLine(){
+        byte[] step = null;
+        Path path = null;
+        while(true){
+            Path checkedPath = Paths.get(getFileName());
+            if(!Files.exists(checkedPath)){
+                break;
+            }
+            path = checkedPath;
+            currentStep++;
+        }
+        if(path == null) return; // already at last line
+
+        try {
+            step = Files.readAllBytes(path);
+        } catch (IOException e) {
+            code.haltLine(code.getCurrentLine()+1);
+            return;
+        }
+
+        code.goToLine(readRegister(step, 0));
+        setRegisters(step);
+        registers.setFlags(readRegister(step, 9));
+    }
 
     public boolean nextLine(){
 
@@ -107,6 +147,12 @@ public class LogReader {
 
     private String getFileName() {
         var fileName = filePrefix + String.format("%05d", currentStep) + "DEB.LOG";
+        System.out.println("Debug file: " + fileName);
+        return fileName;
+    }
+
+    private String getFileName(int fileId){
+        var fileName = filePrefix + String.format("%05d", fileId) + "DEB.LOG";
         System.out.println("Debug file: " + fileName);
         return fileName;
     }

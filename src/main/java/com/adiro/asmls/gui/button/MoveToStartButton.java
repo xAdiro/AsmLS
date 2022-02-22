@@ -23,7 +23,7 @@ public class MoveToStartButton extends StyledButton{
 
     private void moveToEnd(@NotNull ContentView contentView) {
 
-        while(contentView.prevLine()) {}
+        contentView.firstLine();
 
     }
 

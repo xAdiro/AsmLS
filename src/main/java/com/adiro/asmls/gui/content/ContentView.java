@@ -29,6 +29,13 @@ public class ContentView extends HBox{
 
         getChildren().addAll(codeView, registersView);
     }
+    public void firstLine(){
+        logReader.goToFirstLine();
+    }
+
+    public void lastLine(){
+        logReader.goToLastLine();
+    }
 
     public boolean nextLine() {
         return logReader.nextLine();
