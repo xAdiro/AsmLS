@@ -29,21 +29,25 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         StartFilesCreator.generateFiles();
 
+        StackPane stackPane = new StackPane();
+        var scene = new Scene(stackPane, 1366, 768);
+        scene.getStylesheets().add(getClass().getResource("styles/scrollbarstyle.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("styles/common-styles.css").toExternalForm());
+        stage.setScene(scene);
+
         var contentView = new ContentView();
         var textMenu = new TextMenuBar(contentView, stage);
         var topMenu = new IconMenuBar(contentView, stage);
         var layout = new VBox(textMenu, topMenu, contentView);
 
-        StackPane stackPane = new StackPane(layout);
+
+        stackPane.getChildren().add(layout);
 
         stackPane.setBackground(new Background(
                 new BackgroundFill(
                         GuiColors.BACKGROUND2, null, null)));
 
-        var scene = new Scene(stackPane, 1366, 768);
-        scene.getStylesheets().add(getClass().getResource("styles/scrollbarstyle.css").toExternalForm());
-        scene.getStylesheets().add(getClass().getResource("styles/common-styles.css").toExternalForm());
-        stage.setScene(scene);
+
         stage.setTitle("AsmLs");
         stage.show();
     }
