@@ -1,8 +1,12 @@
 package com.adiro.asmls.gui.content.codeview;
 
 import com.adiro.asmls.gui.GuiColors;
+import javafx.geometry.Insets;
+import javafx.geometry.Orientation;
+import javafx.scene.control.Button;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.Text;
@@ -17,7 +21,6 @@ public class LineCounter extends VBox{
                         GuiColors.BACKGROUND1, null, null)));
 
         for(int i = 1; i<=numberOfLines;i++) {
-
             getChildren().add(new LineText(i));
         }
         this.numberOfLines = numberOfLines;
@@ -49,11 +52,30 @@ public class LineCounter extends VBox{
         }
     }
 
-    private class LineText extends Text{
+    private class LineText extends TilePane{
+        Circle breakPointIndicator;
+        private boolean isActive = false;
         public LineText(int number) {
-            super(Integer.toString(number) + " "); // lazy margin
-            setFont(Font.font("Noto Sans Mono", FontPosture.REGULAR, 20));
-            setFill(GuiColors.TEXT2);
+            super(Orientation.VERTICAL); // lazy margin
+            var lineNumber = new Text(Integer.toString(number) + " ");
+            lineNumber.setFont(Font.font("Noto Sans Mono", FontPosture.REGULAR, 20));
+            lineNumber.setFill(GuiColors.TEXT2);
+
+            breakPointIndicator = new Circle(7.0, Color.TRANSPARENT);
+            setPadding(new Insets(0));
+
+            setOnMouseClicked(e -> {selectBreakPoint();});
+            getChildren().addAll(lineNumber, breakPointIndicator);
+        }
+
+        public void selectBreakPoint(){
+            if(isActive){
+                breakPointIndicator.setFill(Color.TRANSPARENT);
+            }
+            else {
+                breakPointIndicator.setFill(GuiColors.BREAKPOINT);
+            }
+            isActive = !isActive;
         }
     }
 }

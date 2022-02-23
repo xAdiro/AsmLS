@@ -12,5 +12,6 @@ public final class GuiColors {
     public static final Color TEXT2 = Color.web("#8c8c8c");
     public static final Color TEXT3 = Color.web("#a6a6a6");
     public static final Color CHANGE = Color.web("#ffcc00", 0.9);
+    public static final Color BREAKPOINT = Color.web("#990000");
 
 }
