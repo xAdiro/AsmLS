@@ -1,5 +1,6 @@
 package com.adiro.asmls.gui.window.settings;
 
+import com.adiro.asmls.gui.window.settings.item.Flags;
 import com.adiro.asmls.gui.window.settings.item.NumberFormat;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
@@ -12,7 +13,8 @@ public class SettingsContent extends StackPane {
         var layout = new VBox();
 
         var numberFormatSetting = new NumberFormat();
-        layout.getChildren().add(numberFormatSetting);
+        var flagsSettings = new Flags();
+        layout.getChildren().addAll(numberFormatSetting, flagsSettings);
         getChildren().add(layout);
 
     }
