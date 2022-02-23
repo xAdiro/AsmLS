@@ -11,10 +11,7 @@ import com.adiro.asmls.logic.DebugFileCreator;
 import com.adiro.asmls.logic.StartFilesCreator;
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
 

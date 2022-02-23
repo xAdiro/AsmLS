@@ -8,20 +8,21 @@ import javafx.scene.text.FontPosture;
 import javafx.scene.text.Text;
 
 public class DoubleText extends HBox{
-    private Text value;
+    private final Text value;
     public DoubleText(String label, String value, int fontSize) {
         super();
         var labelText = new Text(label);
-        labelText.setFont(Font.font("Arial", FontPosture.REGULAR, fontSize));
-        labelText.setFill(GuiColors.TEXT);
+        labelText.setFont(Font.font(fontSize));
+        labelText.getStyleClass().add("text");
         var labelBox = new HBox(labelText);
         labelBox.setMinWidth(fontSize*2.5);
         getChildren().add(labelBox);
 
 
         this.value = new Text(value);
-        this.value.setFont(Font.font("Arial", FontPosture.REGULAR, fontSize));
-        this.value.setFill(GuiColors.TEXT);
+        this.value.setFont(Font.font(fontSize));
+        this.value.getStyleClass().add("text");
+        labelText.getStyleClass().add("text");
         getChildren().add(this.value);
 
     }

@@ -18,6 +18,9 @@
  .context-menu{
     -fx-background-color: generic-background;
 }
+.text{
+    -fx-fill: generic-text;
+}
 .label, .menu{
     -fx-text-fill: generic-text;
 }
