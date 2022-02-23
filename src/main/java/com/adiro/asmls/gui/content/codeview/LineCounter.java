@@ -52,17 +52,18 @@ public class LineCounter extends VBox{
         }
     }
 
-    private class LineText extends TilePane{
+    private class LineText extends HBox{
         Circle breakPointIndicator;
         private boolean isActive = false;
         public LineText(int number) {
-            super(Orientation.VERTICAL); // lazy margin
-            var lineNumber = new Text(Integer.toString(number) + " ");
+            super();
+            var lineNumber = new Text(Integer.toString(number));
             lineNumber.setFont(Font.font("Noto Sans Mono", FontPosture.REGULAR, 20));
             lineNumber.setFill(GuiColors.TEXT2);
 
             breakPointIndicator = new Circle(7.0, Color.TRANSPARENT);
-            setPadding(new Insets(0));
+            breakPointIndicator.setTranslateY(breakPointIndicator.getTranslateY() + 7);
+            setMargin(breakPointIndicator, new Insets(0, 10, 0, 10));
 
             setOnMouseClicked(e -> {selectBreakPoint();});
             getChildren().addAll(lineNumber, breakPointIndicator);
