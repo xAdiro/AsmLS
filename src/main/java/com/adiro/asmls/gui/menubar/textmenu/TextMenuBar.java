@@ -31,7 +31,8 @@ public class TextMenuBar extends MenuBar{
         label2.setTextFill(GuiColors.TEXT);
         menuEdit.setGraphic(label2);
 
-        var settingsMenu = new SettingsMenu(stage.getScene().getRoot());
+        //var settingsMenu = new SettingsMenu(stage.getScene().getRoot());  //disabling for now
+        var settingsMenu = new Menu("Settings");
 
         getMenus().addAll(menuFile, menuEdit, settingsMenu);
     }

@@ -54,6 +54,7 @@ public class FileSubMenu extends MenuItem{
 
             filePath = selectedFile.getAbsolutePath();
             contentView.setSourceCodePath(filePath);
+            contentView.firstLine();
             setPrevLocation(filePath);
             DebugFileCreator.createRunFile(filePath);
             System.out.println("Selected: " + filePath);

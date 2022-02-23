@@ -114,7 +114,7 @@ public final class DebugFileCreator {
                                 + "program.com\n"
                                 + "cd ..");
 
-        Path runFilePath = Paths.get(sourceDirPath+"/debug.bat");
+        Path runFilePath = Paths.get(sourceDirPath+"/runDebu.bat");
         try {
             Files.write(runFilePath, runFileContent, StandardCharsets.UTF_8);
         } catch (IOException e) {

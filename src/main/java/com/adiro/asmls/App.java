@@ -12,6 +12,7 @@ import com.adiro.asmls.logic.StartFilesCreator;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.*;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 
@@ -48,7 +49,7 @@ public class App extends Application {
                         GuiColors.BACKGROUND2, null, null)));
 
 
-        stage.setTitle("AsmLs");
+        stage.setTitle("AsmLS");
         stage.show();
     }
 

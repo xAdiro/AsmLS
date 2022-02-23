@@ -40,7 +40,7 @@
     -fx-background-color: pressed-button;
 }
 .menu-button:hover .label{     /* No idea what is the parent of .label to use ">" so !important in next line is necessary*/
-    -fx-text-fill: lit-text;
+    -fx-text-fill: lit-text !important;
 }
 .menu-item .label{
     -fx-text-fill: generic-text !important;
@@ -72,4 +72,7 @@
 }
 .button:pressed{
     -fx-background-color: pressed-button;
+}
+.value{
+    -fx-fill: transparent;
 }

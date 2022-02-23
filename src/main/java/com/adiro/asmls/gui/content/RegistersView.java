@@ -8,6 +8,8 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
 
 public class RegistersView extends VBox{
 
@@ -94,10 +96,22 @@ public class RegistersView extends VBox{
         }
 
         public void setValue(int newValue) {
-            rxText.setValue(newValue);
-            rlText.setValue(newValue & 0x00FF);
-            rhText.setValue(newValue >> 8);
+            setNewText(rxText, newValue);
+            //rxText.setValue(newValue);
+            setNewText(rlText, newValue & 0x00FF);
+            //rlText.setValue(newValue & 0x00FF);
+            setNewText(rhText, newValue >> 8);
+            //rhText.setValue(newValue >> 8);
+        }
 
+        private void setNewText(DoubleText text, int newValue){
+            if(!Integer.toString(newValue).equals(text.getValue())){
+                text.setValueColor(GuiColors.CHANGE);
+            }
+            else{
+                text.setValueColor(GuiColors.TEXT3);
+            }
+            text.setValue(newValue);
         }
     }
 
@@ -111,11 +125,11 @@ public class RegistersView extends VBox{
             var flagFontSize = 16;
             flags = new DoubleText[16];
             flags[0] = new DoubleText("CF:", "0", flagFontSize);
-            flags[1] = new DoubleText("1:", "0", flagFontSize);
+            //flags[1] = new DoubleText("1:", "0", flagFontSize);
             flags[2] = new DoubleText("PF:", "0", flagFontSize);
-            flags[3] = new DoubleText("0:", "0", flagFontSize);
+            //flags[3] = new DoubleText("0:", "0", flagFontSize);
             flags[4] = new DoubleText("AF:", "0", flagFontSize);
-            flags[5] = new DoubleText("0:", "0", flagFontSize);
+            //flags[5] = new DoubleText("0:", "0", flagFontSize);
             flags[6] = new DoubleText("ZF:", "0", flagFontSize);
             flags[7] = new DoubleText("SF:", "0", flagFontSize);
             flags[8] = new DoubleText("TF:", "0", flagFontSize);
@@ -125,20 +139,35 @@ public class RegistersView extends VBox{
             flags[12] = new DoubleText("PL:", "0", flagFontSize);
             flags[13] = new DoubleText("IO:", "0", flagFontSize);
             flags[14] = new DoubleText("NT:", "0", flagFontSize);
-            flags[15] = new DoubleText("0:", "0", flagFontSize);
+            //flags[15] = new DoubleText("0:", "0", flagFontSize);
 
             for(var flag : flags) {
-                getChildren().add(flag);
+                if(flag != null) {
+                    flag.setValueColor(Color.GRAY);
+                    getChildren().add(flag);
+                }
             }
             VBox.setMargin(this, new Insets(0,0,0,10));
 
         }
 
         public void setValue(int newValue) {
-
             for(int i = 0; i < flags.length; i++) {
-                flags[i].setValue((newValue >> i) & 1);
+                if(flags[i] != null) {
+                    setText(flags[i], (newValue >> i) & 1);
+                }
             }
+        }
+
+        private void setText(DoubleText text, int newValue){
+            if(!Integer.toString(newValue).equals(text.getValue())){
+                text.setValueColor(GuiColors.CHANGE);
+            }
+            else{
+                if(newValue==1) text.setValueColor(Color.LIME);
+                else text.setValueColor(Color.GRAY);
+            }
+            text.setValue(newValue);
         }
     }
 }

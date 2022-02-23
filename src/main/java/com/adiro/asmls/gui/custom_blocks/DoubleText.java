@@ -3,6 +3,7 @@ package com.adiro.asmls.gui.custom_blocks;
 import com.adiro.asmls.gui.GuiColors;
 
 import javafx.scene.layout.HBox;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.Text;
@@ -21,13 +22,17 @@ public class DoubleText extends HBox{
 
         this.value = new Text(value);
         this.value.setFont(Font.font(fontSize));
-        this.value.getStyleClass().add("text");
-        labelText.getStyleClass().add("text");
+        this.value.getStyleClass().add("value");
         getChildren().add(this.value);
 
     }
     public void setValue(int newValue) {
         value.setText(Integer.toString(newValue));
     }
+    public String getValue() {return value.getText();}
+    public void setValueColor(Color color){ value.setFill(color);
+    }
+
+
 }
 
