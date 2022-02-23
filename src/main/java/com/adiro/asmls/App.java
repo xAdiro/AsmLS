@@ -34,7 +34,11 @@ public class App extends Application {
         var scene = new Scene(stackPane, 1366, 768);
         scene.getStylesheets().add(getClass().getResource("styles/scrollbarstyle.css").toExternalForm());
         scene.getStylesheets().add(getClass().getResource("styles/common-styles.css").toExternalForm());
+
         stage.setScene(scene);
+        stage.setTitle("AsmLS");
+        stage.show();
+        stage.setMaximized(true);
 
         var contentView = new ContentView();
         var textMenu = new TextMenuBar(contentView, stage);
@@ -49,8 +53,7 @@ public class App extends Application {
                         GuiColors.BACKGROUND2, null, null)));
 
 
-        stage.setTitle("AsmLS");
-        stage.show();
+
     }
 
 
