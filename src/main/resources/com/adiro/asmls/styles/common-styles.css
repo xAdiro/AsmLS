@@ -10,6 +10,7 @@
     lit-text: white;
     pressed-button: radial-gradient(radius 180%, rgba(255,255,255,0.3), transparent);
     generic-border: rgba(0, 128, 128, 0.2);
+    second-border: #333333;
     -fx-background-color: generic-background;
     -fx-accent: transparent;
 }
@@ -35,8 +36,19 @@
 .menu-button:pressed{
     -fx-background-color: pressed-button;
 }
-.menu-button:hover .label{
+.menu-button:hover .label{     /* No idea what is the parent of .label to use ">" so !important in next line is necessary*/
     -fx-text-fill: lit-text;
+}
+.menu-item .label{
+    -fx-text-fill: generic-text !important;
+}
+.context-menu{
+    -fx-padding: 0;
+    -fx-border-color: second-border;
+    -fx-border-width: 1;
+}
+.context-menu .menu-item{
+    -fx-padding: 7;
 }
 .context-menu .menu-item:hover{
     -fx-background-color: lit-button;
@@ -45,7 +57,7 @@
     -fx-background-color: pressed-button;
 }
 .context-menu .menu-item:hover .label{
-    -fx-text-fill: lit-text;
+    -fx-text-fill: lit-text !important;
 }
 
 .button{

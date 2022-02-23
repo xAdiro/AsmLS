@@ -24,8 +24,8 @@ public class CodeView extends StyledScrollPane {
 
     public CodeView() {
         super();
-
         code = new VBox();
+        code.setPadding(new Insets(0,0,0,5));
         code.setBackground(new Background(
                 new BackgroundFill(
                         GuiColors.BACKGROUND1, null, null)));
