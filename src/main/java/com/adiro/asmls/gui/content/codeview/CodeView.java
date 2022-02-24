@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import com.adiro.asmls.App;
 import com.adiro.asmls.gui.GuiColors;
 
 import com.adiro.asmls.gui.content.ContentView;
@@ -111,7 +112,10 @@ public class CodeView extends StyledScrollPane {
         code.getChildren().clear();
         while(scanner.hasNextLine()) {
             var line = new Text(scanner.nextLine());
-            line.setFont(Font.font("Noto Sans Mono", 20));
+
+            Font font = Font.loadFont(App.class.getResource("fonts/CONSOLA.TTF").toExternalForm(), 23);
+            line.setFont(font);
+
             line.setFill(GuiColors.TEXT);
 
             var textLine = new TextLine(line);
@@ -175,7 +179,7 @@ public class CodeView extends StyledScrollPane {
             super(text);
             this.text = text;
             setPadding(new Insets(0));
-
+            setPadding(new Insets(0,0,3,0));
         }
 
         @SuppressWarnings("unused")

@@ -1,5 +1,6 @@
 package com.adiro.asmls.gui.content.codeview;
 
+import com.adiro.asmls.App;
 import com.adiro.asmls.gui.GuiColors;
 import com.adiro.asmls.gui.content.ContentView;
 import javafx.geometry.Insets;
@@ -61,8 +62,10 @@ public class LineCounter extends VBox{
         private boolean isActive = false;
         public LineText(int number) {
             super();
+            setPadding(new Insets(0,0,3,0));
             var lineNumber = new Text(Integer.toString(number));
-            lineNumber.setFont(Font.font("Noto Sans Mono", FontPosture.REGULAR, 20));
+            Font font = Font.loadFont(App.class.getResource("fonts/CONSOLA.TTF").toExternalForm(), 23);
+            lineNumber.setFont(font);
             lineNumber.setFill(GuiColors.TEXT2);
 
             breakPointIndicator = new Circle(7.0, Color.TRANSPARENT);
