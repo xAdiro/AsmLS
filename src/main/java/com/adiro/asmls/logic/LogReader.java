@@ -25,7 +25,7 @@ public class LogReader {
         this.code = sourceArea;
 
         try {
-            var resource = ".source";
+            var resource = ".AsmLS-Config";
             BufferedReader br = new BufferedReader(new FileReader(resource));
             setLogDirectory(new File(br.readLine()).getParent()+"/debug/");
             br.close();

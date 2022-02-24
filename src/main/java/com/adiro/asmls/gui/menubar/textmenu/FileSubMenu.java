@@ -68,7 +68,7 @@ public class FileSubMenu extends MenuItem{
         String prevLocation = "";
 
         try {
-            var resource = ".source";
+            var resource = ".AsmLS-Config";
             BufferedReader br = new BufferedReader(new FileReader(resource));
             prevLocation = br.readLine();
             br.close();
@@ -83,7 +83,7 @@ public class FileSubMenu extends MenuItem{
 
     private void setPrevLocation(String location) {
         try {
-           PrintWriter writer = new PrintWriter(new File(".source"));
+           PrintWriter writer = new PrintWriter(new File(".AsmLS-Config"));
            writer.print(location);
            writer.close();
         } catch (IOException e1) {

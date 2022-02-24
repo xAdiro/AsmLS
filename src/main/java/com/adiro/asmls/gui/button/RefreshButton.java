@@ -37,7 +37,7 @@ public class RefreshButton extends StyledButton{
         String prevLocation = "";
 
         try {
-            var resource = ".source";
+            var resource = ".AsmLS-Config";
             BufferedReader br = new BufferedReader(new FileReader(resource));
             prevLocation = br.readLine();
             br.close();

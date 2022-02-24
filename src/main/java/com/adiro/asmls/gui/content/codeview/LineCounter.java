@@ -62,7 +62,7 @@ public class LineCounter extends VBox{
         private boolean isActive = false;
         public LineText(int number) {
             super();
-            setPadding(new Insets(0,0,3,0));
+            setPadding(new Insets(2,0,2,0));
             var lineNumber = new Text(Integer.toString(number));
             Font font = Font.loadFont(App.class.getResource("fonts/CONSOLA.TTF").toExternalForm(), 23);
             lineNumber.setFont(font);

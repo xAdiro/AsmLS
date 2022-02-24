@@ -154,7 +154,7 @@ public class CodeView extends StyledScrollPane {
 
         String prevLocation = "";
         try{
-            var resource = ".source";
+            var resource = ".AsmLS-Config";
             BufferedReader br = new BufferedReader(new FileReader(resource));
             prevLocation = br.readLine();
             br.close();
@@ -179,7 +179,7 @@ public class CodeView extends StyledScrollPane {
             super(text);
             this.text = text;
             setPadding(new Insets(0));
-            setPadding(new Insets(0,0,3,0));
+            setPadding(new Insets(2,0,2,0));
         }
 
         @SuppressWarnings("unused")

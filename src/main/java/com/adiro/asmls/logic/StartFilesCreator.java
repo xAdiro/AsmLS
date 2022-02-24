@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class StartFilesCreator {
     public static void generateFiles(){
         try {
-            var sourceFile = new File("./.source");
+            var sourceFile = new File("./.AsmLS-Config");
             var helloFile = new File(".hello.txt");
             if(sourceFile.createNewFile()) {
                 System.out.println("[INFO] Generated asmls directory");

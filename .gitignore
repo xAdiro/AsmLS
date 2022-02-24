@@ -1,4 +1,5 @@
 /.source
+/.AsmLS-Config
 /.hello.txt
 /.idea/*
 !/.idea/artifacts
