@@ -13,4 +13,4 @@ It assumes you have a nasm compiler at a:/nasm/nasm.exe (otherwise you have to c
 
 ### Requires java 11 or higher
 
-<img src="https://github.com/xAdiro/ASMLS/blob/main/asmls-visual-update.png?raw=true" align="left"></img>
+<img src="https://raw.githubusercontent.com/xAdiro/ASMLS/main/AsmLS-breakpoints.png" align="left"></img>
