@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 import com.adiro.asmls.gui.GuiColors;
 
+import com.adiro.asmls.gui.content.ContentView;
 import javafx.geometry.Insets;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
@@ -22,7 +23,7 @@ public class CodeView extends StyledScrollPane {
     private VBox code;
     private LineCounter lineCounter;
 
-    public CodeView() {
+    public CodeView(ContentView contentView) {
         super();
         code = new VBox();
         code.setPadding(new Insets(0,0,0,5));
@@ -33,7 +34,7 @@ public class CodeView extends StyledScrollPane {
 
 
         sourceCodePath = getPrevLocation();
-        lineCounter = new LineCounter(0);
+        lineCounter = new LineCounter(0, contentView);
         loadSourceCode();
 
 
@@ -72,9 +73,6 @@ public class CodeView extends StyledScrollPane {
         while(i < index);
 
         setVvalue( (1.0 / (sourceCode.size()-24.5))* (currentLine - 0.2));
-
-
-
         return true;
     }
 

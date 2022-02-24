@@ -1,6 +1,11 @@
 package com.adiro.asmls.gui.content;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 import com.adiro.asmls.gui.content.codeview.CodeView;
 import com.adiro.asmls.logic.LogReader;
 import javafx.beans.NamedArg;
@@ -13,6 +18,7 @@ public class ContentView extends HBox{
     private final RegistersView registersView;
     private final CodeView codeView;
     private final LogReader logReader;
+    private Set<Integer> breakPoints;
 
     public ContentView() {
 
@@ -22,12 +28,14 @@ public class ContentView extends HBox{
         VBox.setVgrow(this, Priority.ALWAYS);
 
        registersView = new RegistersView();
-        codeView = new CodeView();
+        codeView = new CodeView(this);
         HBox.setHgrow(codeView, Priority.ALWAYS);
         VBox.setVgrow(codeView, Priority.ALWAYS);
         logReader = new LogReader(registersView, codeView);
 
         getChildren().addAll(codeView, registersView);
+
+        breakPoints = new HashSet<Integer>();
     }
     public void firstLine(){
         logReader.goToFirstLine();
@@ -43,6 +51,22 @@ public class ContentView extends HBox{
 
     public boolean prevLine() {
         return logReader.prevLine();
+    }
+
+    public void nextBreakPoint(){
+        logReader.goForwardToBreakPoint(breakPoints);
+    }
+
+    public void previousBreakPoint(){
+        logReader.goBackwardsToBreakPoint(breakPoints);
+    }
+
+    public void addBreakPoint(int lineNumber){
+        breakPoints.add(lineNumber);
+    }
+
+    public void removeBreakPoint(int lineNumber){
+        breakPoints.remove(lineNumber);
     }
 
     public void setSourceCodePath(String path) {

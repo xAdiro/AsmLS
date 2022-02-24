@@ -4,7 +4,9 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 import com.adiro.asmls.App;
 import com.adiro.asmls.gui.content.RegistersView;
@@ -16,6 +18,7 @@ public class LogReader {
     CodeView code;
     int currentStep = 0;
     private String filePrefix;
+    private List<Integer> breakPoints;
 
     public LogReader(RegistersView registers, CodeView sourceArea) {
         this.registers = registers;
@@ -59,7 +62,7 @@ public class LogReader {
         nextLine();
     }
 
-    public void nextLine(){
+    public boolean nextLine(){
 
         byte[] step = null;
         try {
@@ -76,13 +79,14 @@ public class LogReader {
             else{
                 currentStep++;
             }
-            return;
+            return false;
         }
         currentStep++;
 
         code.goToLine(readRegister(step, 0));
         setRegisters(step);
         registers.setFlags(readRegister(step, 9));
+        return true;
     }
 
     public boolean prevLine() {
@@ -92,11 +96,22 @@ public class LogReader {
             nextLine();
             return true;
         }
-
-
         return false;
     }
 
+    public void goForwardToBreakPoint(Set<Integer> breakPoints){
+        do{
+            if(!nextLine()) break;
+        }while(!breakPoints.contains(code.getCurrentLine()+1));
+    }
+
+    public void goBackwardsToBreakPoint(Set<Integer> breakPoints){
+
+        do{
+            if(!prevLine()) break;
+        }
+        while(!breakPoints.contains(code.getCurrentLine()+1));
+    }
     private void setRegisters(byte[] bytes) {
 
         registers.setAx(readRegister(bytes, 1));

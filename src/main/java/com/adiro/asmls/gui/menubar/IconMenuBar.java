@@ -1,13 +1,7 @@
 package com.adiro.asmls.gui.menubar;
 
 import com.adiro.asmls.gui.GuiColors;
-import com.adiro.asmls.gui.button.RefreshButton;
-import com.adiro.asmls.gui.button.MoveBackButton;
-import com.adiro.asmls.gui.button.MoveManyBackButton;
-import com.adiro.asmls.gui.button.MoveManyNextButton;
-import com.adiro.asmls.gui.button.MoveNextButton;
-import com.adiro.asmls.gui.button.MoveToEndButton;
-import com.adiro.asmls.gui.button.MoveToStartButton;
+import com.adiro.asmls.gui.button.*;
 import com.adiro.asmls.gui.content.ContentView;
 
 import javafx.geometry.Insets;
@@ -25,10 +19,12 @@ public class IconMenuBar extends VBox{
         getStyleClass().add("icon-menu-bar");
         var buttons = new ButtonSet(
                 new MoveToStartButton(contentView),
+                new MoveBackwardsToBreakPointButton(contentView),
                 new MoveManyBackButton(contentView),
                 new MoveBackButton(contentView),
                 new MoveNextButton(contentView),
                 new MoveManyNextButton(contentView),
+                new MoveForwardToBreakPointButton(contentView),
                 new MoveToEndButton(contentView),
                 new RefreshButton(contentView)
         );
