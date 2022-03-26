@@ -4,6 +4,8 @@ After picking your assembly file it will generate runDebu.bat next to it that yo
 
 It was created as a consequence of many of my college classmates struggles with debugging assembly code. There are obviously better tools for such a task but my motivation was to challenge myself both in assembly and java programming. Also its ease of use allows students to use it right away in a convenient portable form rather than configuring one of modern IDEs.
 
+<img src="https://raw.githubusercontent.com/xAdiro/ASMLS/main/AsmLS-breakpoints.png" align="left"></img>
+ㅤ
 ### Technologies used
 - Java 11
 - JavaFX 11
@@ -25,8 +27,6 @@ It was created as a consequence of many of my college classmates struggles with 
 3. Run runDebu.but in your dos environment and after it ends proceed to AsmLS window
 4. You can now use arrows to navigate through lines in AsmLS
 5. If you make changes to your assembly file make sure to click refresh button to generate new runDebu.bat with updated code
-
-<img src="https://raw.githubusercontent.com/xAdiro/ASMLS/main/AsmLS-breakpoints.png" align="left"></img>
 
 ### Final notes
 It should be noted that both 'Edit' and 'Settings' sections in top menu bar are dummy buttons and shouldn't be expected to do anything. Potentially there might be added functionality to them in future
