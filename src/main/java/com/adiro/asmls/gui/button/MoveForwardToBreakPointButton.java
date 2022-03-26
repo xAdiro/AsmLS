@@ -2,6 +2,7 @@ package com.adiro.asmls.gui.button;
 
 import com.adiro.asmls.App;
 import com.adiro.asmls.gui.content.ContentView;
+import com.adiro.asmls.utilities.ResourceSupplier;
 import javafx.application.Platform;
 import javafx.concurrent.Task;
 import javafx.scene.control.Tooltip;
@@ -21,7 +22,7 @@ public class MoveForwardToBreakPointButton extends StyledButton {
     }
 
     private void setDefaultIcon(){
-        setGraphic(new ImageView(App.class.getResource("icons/next-breakpoint.png").toExternalForm()));
+        setGraphic(ResourceSupplier.Icons.nextBreakpoint);
     }
 
     private void setLoadingIcon(){

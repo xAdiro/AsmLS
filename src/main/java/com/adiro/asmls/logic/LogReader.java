@@ -5,10 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
-import java.util.Objects;
 import java.util.Set;
-
-import com.adiro.asmls.App;
 import com.adiro.asmls.gui.content.RegistersView;
 import com.adiro.asmls.gui.content.codeview.CodeView;
 

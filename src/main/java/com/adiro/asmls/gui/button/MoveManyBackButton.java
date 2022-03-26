@@ -3,15 +3,16 @@ package com.adiro.asmls.gui.button;
 import com.adiro.asmls.App;
 import com.adiro.asmls.gui.content.ContentView;
 
+import com.adiro.asmls.utilities.ResourceSupplier;
 import javafx.beans.NamedArg;
 import javafx.scene.control.Tooltip;
 import javafx.scene.image.ImageView;
 
 public class MoveManyBackButton extends MoveBackButton{
 
-    public MoveManyBackButton(@NamedArg("contentView") ContentView contentView) {
+    public MoveManyBackButton(ContentView contentView) {
         super(contentView);
-        setGraphic(new ImageView(App.class.getResource("icons/previous-many.png").toExternalForm()));
+        setGraphic(ResourceSupplier.Icons.manyPrevious);
         setTooltip(new Tooltip("Move 10 lines backwards"));
     }
 

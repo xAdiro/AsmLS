@@ -1,7 +1,7 @@
 package com.adiro.asmls.gui.content;
 
 import com.adiro.asmls.gui.GuiColors;
-import com.adiro.asmls.gui.custom_blocks.DoubleText;
+import com.adiro.asmls.gui.global_blocks.DoubleText;
 import javafx.geometry.Insets;
 import javafx.scene.control.Separator;
 import javafx.scene.layout.Background;
@@ -9,7 +9,6 @@ import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
-import javafx.scene.text.Text;
 
 public class RegistersView extends VBox{
 

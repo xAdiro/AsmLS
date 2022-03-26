@@ -6,13 +6,10 @@ import com.adiro.asmls.gui.GuiColors;
 import com.adiro.asmls.gui.content.ContentView;
 import com.adiro.asmls.gui.menubar.IconMenuBar;
 import com.adiro.asmls.gui.menubar.textmenu.TextMenuBar;
-
-import com.adiro.asmls.logic.DebugFileCreator;
 import com.adiro.asmls.logic.StartFilesCreator;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.*;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 
@@ -32,7 +29,7 @@ public class App extends Application {
 
         StackPane stackPane = new StackPane();
         var scene = new Scene(stackPane, 1366, 768);
-        scene.getStylesheets().add(getClass().getResource("styles/scrollbarstyle.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("styles/scrollbar-style.css").toExternalForm());
         scene.getStylesheets().add(getClass().getResource("styles/common-styles.css").toExternalForm());
 
         stage.setScene(scene);

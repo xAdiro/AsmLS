@@ -5,8 +5,6 @@ import java.io.File;
 import java.io.*;
 import java.io.FileReader;
 import java.io.IOException;
-import java.net.URISyntaxException;
-import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -16,7 +14,6 @@ import java.text.MessageFormat;
 import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Pattern;
-
 import com.adiro.asmls.App;
 
 public final class DebugFileCreator {
@@ -28,8 +25,6 @@ public final class DebugFileCreator {
         BufferedReader reader;
         try {
             reader = new BufferedReader(new FileReader(sourceFilePath));
-
-
             String line = reader.readLine();
             int i = 0;
             while(line != null) {
@@ -53,15 +48,11 @@ public final class DebugFileCreator {
                     }
                     i++;
                 }
-
                 else {
                     outputContent += line + "\n";
                 }
                 line = reader.readLine();
-
-
             }
-
             outputContent += "\n%include 'debug.asm'";
 
             reader.close();
@@ -70,7 +61,6 @@ public final class DebugFileCreator {
             System.out.print("[FileCreator ERROR] couldn't find: " + sourceFilePath);
             e.printStackTrace();
         }
-
 
         try {
 
@@ -143,15 +133,11 @@ public final class DebugFileCreator {
     }
 
     private static boolean isMemoryLine(String line) {
-
-
-        //String regexMemoryLine = "[\t, ]*(([^(\t| )]*[\t, ]+)|([\t, ]*))db[\t, ]+";
         String regexMemoryLine =".*[\t, ]+(db|dw|dd|dq|dt)[\t, ]+.*";
         var memoryLinePattern = Pattern.compile(regexMemoryLine);
         var matcher = memoryLinePattern.matcher(line);
 
-        if(matcher.matches()) return true;
-        return false;
+        return matcher.matches();
     }
 
     private static String getFileDirectory(String filePath) {

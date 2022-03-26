@@ -1,11 +1,8 @@
-package com.adiro.asmls.gui.custom_blocks;
-
-import com.adiro.asmls.gui.GuiColors;
+package com.adiro.asmls.gui.global_blocks;
 
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
-import javafx.scene.text.FontPosture;
 import javafx.scene.text.Text;
 
 public class DoubleText extends HBox{
