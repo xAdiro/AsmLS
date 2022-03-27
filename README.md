@@ -10,7 +10,7 @@
 - [Final notes](#final-notes)
 
 ## General info
-Assembly Life Saver is a very simple (primitive one might say) debugger for 16-bit nasm programs, with GPRs and flags preview.
+AsmLS (which states for Assembly Life Saver) is a very simple (primitive one might say) debugger for 16-bit nasm programs, with GPRs and flags preview.
 After picking your assembly file it will generate runDebu.bat next to it that you can run in your dos in order to debug your program later. 
 
 It was created as a consequence of many of my college classmates struggles with debugging assembly code. There are obviously better tools for such a task but my motivation was to challenge myself both in assembly and java programming. Also its ease of use allows students to use it right away in a convenient portable form rather than configuring one of modern IDEs.
