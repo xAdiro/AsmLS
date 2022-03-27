@@ -10,51 +10,30 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
-import java.text.MessageFormat;
-import java.util.Arrays;
 import java.util.List;
-import java.util.regex.Pattern;
-import com.adiro.asmls.App;
+
+import com.adiro.asmls.utilities.CodeSupplier;
+import com.adiro.asmls.utilities.ResourceSupplier;
 
 public final class DebugFileCreator {
 
     private static void createDebugFile(String sourceFilePath) {
-        var outputContent = "";
-        var debugFilePath = getFileDirectory(sourceFilePath) + "/debug/runDebug.asm";
+        final var debugFilePath = ResourceSupplier.Files.Debug.path(sourceFilePath);
 
+        StringBuilder outputContent = new StringBuilder();
         BufferedReader reader;
         try {
             reader = new BufferedReader(new FileReader(sourceFilePath));
             String line = reader.readLine();
-            int i = 0;
-            while(line != null) {
-
+            for(int i = 0 ; line != null; line = reader.readLine()) {
                 if(!line.isBlank()) {
-                    if(!isMemoryLine(line)) {
-                        line = fixLoop(line);
-
-
-                        outputContent +=
-                                line	+ "\n"
-                                        + ";<DEBUG>\n"
-                                        + MessageFormat.format("mov	[dane], byte {0}", (i >> 8)) + "\n"
-                                        + MessageFormat.format("mov	[dane+1], byte {0}", (i & 0x00FF)) + "\n"
-                                        + "call 	zapLinie\n"
-                                        + ";</DEBUG>\n";
-                    }
-                    else {
-                        line = line+"\t;MEMORY\n";
-                        outputContent += line;
-                    }
+                    outputContent.append(CodeSupplier.Asm.getDebugLine(line, i));
                     i++;
                 }
-                else {
-                    outputContent += line + "\n";
-                }
-                line = reader.readLine();
+                outputContent.append(line);
             }
-            outputContent += "\n%include 'debug.asm'";
 
+            outputContent.append(CodeSupplier.Asm.LIBRARY_LINE);
             reader.close();
         }
         catch(IOException e) {
@@ -62,88 +41,45 @@ public final class DebugFileCreator {
             e.printStackTrace();
         }
 
-        try {
+        saveToDebugFile(outputContent.toString(), sourceFilePath);
+        System.out.println("[INFO] Generated debug file: " + debugFilePath);
+    }
 
-            var file = new File(debugFilePath);
-            file.createNewFile();
+
+    private static void copyDebugLibrary(String sourceDirPath) {
+        var input = ResourceSupplier.Files.Debug.sourcePath();
+        Path output = Paths.get(sourceDirPath + "/debug.asm");
+
+        try {
+            Files.copy(input, output, StandardCopyOption.REPLACE_EXISTING);
+        } catch (IOException e) {e.printStackTrace();}
+    }
+
+    public static void createRunFile(String sourceFilePath) {
+        var debugDirPath = ResourceSupplier.Files.Debug.dirPath(sourceFilePath);
+        new File(debugDirPath).mkdirs();
+        createDebugFile(sourceFilePath);
+        copyDebugLibrary(debugDirPath);
+
+        List<String> runFileContent = List.of(CodeSupplier.Bat.RUNNABLE);
+        Path runFilePath = Paths.get(ResourceSupplier.Files.Debug.runFilePath(sourceFilePath));
+        try {
+            Files.write(runFilePath, runFileContent, StandardCharsets.UTF_8);
+        } catch (IOException e) {e.printStackTrace();}
+    }
+
+    private static void saveToDebugFile(String content, String sourceFilePath){
+        var debugFilePath = ResourceSupplier.Files.Debug.path(sourceFilePath);
+        try {
+            new File(debugFilePath).createNewFile();
 
             var writer = new BufferedWriter(new FileWriter(debugFilePath));
-            writer.write(outputContent);
+            writer.write(content);
             writer.close();
         } catch (IOException e) {
             System.out.print("[FileCreator ERROR] couldn't write to: " + debugFilePath);
             e.printStackTrace();
         }
-
-        System.out.println("[INFO] Generated debug file: " + debugFilePath);
     }
-
-    private static void copyDebugLibrary(String sourceDirPath) {
-
-        var input = App.class.getResourceAsStream("files/debug.asm");
-        Path output = Paths.get(sourceDirPath + "/debug/debug.asm");
-
-        try {
-            Files.copy(input, output, StandardCopyOption.REPLACE_EXISTING);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static void createRunFile(String sourceFilePath) {
-        var sourceDirPath = getFileDirectory(sourceFilePath);
-        new File(sourceDirPath + "/debug").mkdirs();
-        createDebugFile(sourceFilePath);
-        copyDebugLibrary(sourceDirPath);
-
-        List<String> runFileContent =
-                Arrays.asList(
-                        "cd debug\n"
-                                + "a:\\nasm\\nasm -o program.com -f bin runDebug.asm\n"
-                                + "del *.log\n"
-                                + "program.com\n"
-                                + "cd ..");
-
-        Path runFilePath = Paths.get(sourceDirPath+"/runDebu.bat");
-        try {
-            Files.write(runFilePath, runFileContent, StandardCharsets.UTF_8);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    private static String fixLoop(String line) {
-
-        String regexLoop = "loop.*";
-        var loopPattern = Pattern.compile(regexLoop);
-        var matcher = loopPattern.matcher(line.trim());
-        if(matcher.matches()) {
-
-            String label = line.trim().substring(line.trim().indexOf("loop") + 4);
-
-
-            line = "dec cx\n"
-                    + "cmp cx, 0\n"
-                    + "jnz "
-                    + label + "\n";
-        }
-        return line;
-
-    }
-
-    private static boolean isMemoryLine(String line) {
-        String regexMemoryLine =".*[\t, ]+(db|dw|dd|dq|dt)[\t, ]+.*";
-        var memoryLinePattern = Pattern.compile(regexMemoryLine);
-        var matcher = memoryLinePattern.matcher(line);
-
-        return matcher.matches();
-    }
-
-    private static String getFileDirectory(String filePath) {
-        File sourceFile = new File(filePath);
-        return sourceFile.getParent();
-    }
-
 }
 
