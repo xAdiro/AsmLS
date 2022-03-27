@@ -27,7 +27,7 @@ public final class DebugFileCreator {
             String line = reader.readLine();
             for(int i = 0 ; line != null; line = reader.readLine()) {
                 if(!line.isBlank()) {
-                    outputContent.append(CodeSupplier.Asm.getDebugLine(line, i));
+                    line = (CodeSupplier.Asm.getDebugLine(line, i));
                     i++;
                 }
                 outputContent.append(line);
@@ -44,7 +44,6 @@ public final class DebugFileCreator {
         saveToDebugFile(outputContent.toString(), sourceFilePath);
         System.out.println("[INFO] Generated debug file: " + debugFilePath);
     }
-
 
     private static void copyDebugLibrary(String sourceDirPath) {
         var input = ResourceSupplier.Files.Debug.sourcePath();
