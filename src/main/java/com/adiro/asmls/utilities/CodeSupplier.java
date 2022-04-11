@@ -25,7 +25,6 @@ public class CodeSupplier {
                         + "call 	zapLinie\n"
                         + ";</DEBUG>\n";
             }
-
             return outputLine;
         }
 

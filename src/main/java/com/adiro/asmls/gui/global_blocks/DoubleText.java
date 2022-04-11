@@ -16,20 +16,16 @@ public class DoubleText extends HBox{
         labelBox.setMinWidth(fontSize*2.5);
         getChildren().add(labelBox);
 
-
         this.value = new Text(value);
         this.value.setFont(Font.font(fontSize));
         this.value.getStyleClass().add("value");
         getChildren().add(this.value);
-
     }
+
     public void setValue(int newValue) {
         value.setText(Integer.toString(newValue));
     }
     public String getValue() {return value.getText();}
-    public void setValueColor(Color color){ value.setFill(color);
-    }
-
-
+    public void setValueColor(Color color){ value.setFill(color);}
 }
 

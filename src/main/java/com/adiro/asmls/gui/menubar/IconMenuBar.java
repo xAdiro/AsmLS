@@ -1,9 +1,5 @@
 package com.adiro.asmls.gui.menubar;
 
-import com.adiro.asmls.gui.GuiColors;
-import com.adiro.asmls.gui.button.*;
-import com.adiro.asmls.gui.content.ContentView;
-
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Background;
@@ -12,8 +8,11 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class IconMenuBar extends VBox{
+import com.adiro.asmls.gui.GuiColors;
+import com.adiro.asmls.gui.button.*;
+import com.adiro.asmls.gui.content.ContentView;
 
+public class IconMenuBar extends VBox{
     public IconMenuBar(ContentView contentView, Stage stage) {
         super();
         getStyleClass().add("icon-menu-bar");
@@ -28,9 +27,7 @@ public class IconMenuBar extends VBox{
                 new MoveToEndButton(contentView),
                 new RefreshButton(contentView)
         );
-
         getChildren().addAll(buttons);
-
 
         setPadding(new Insets(5));
         setBackground(
@@ -45,5 +42,4 @@ public class IconMenuBar extends VBox{
             setSpacing(5);
         }
     }
-
 }

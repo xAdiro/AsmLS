@@ -6,11 +6,11 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.Set;
+
 import com.adiro.asmls.gui.content.RegistersView;
 import com.adiro.asmls.gui.content.codeview.CodeView;
 
 public class LogReader {
-
     RegistersView registers;
     CodeView code;
     int currentStep = 0;
@@ -29,8 +29,8 @@ public class LogReader {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
+
     public void goToFirstLine(){
         byte[] step = null;
         try {
@@ -49,10 +49,10 @@ public class LogReader {
 
     public void goToLastLine(){
         Path checkedPath = null;
-        do{
+        do {
             currentStep++;
             checkedPath = Paths.get(getFileName());
-        }while(Files.exists(checkedPath));
+        } while(Files.exists(checkedPath));
 
         currentStep--;
         nextLine();
@@ -60,7 +60,6 @@ public class LogReader {
     }
 
     public boolean nextLine(){
-
         byte[] step = null;
         try {
             Path path = Paths.get(getFileName());
@@ -87,7 +86,6 @@ public class LogReader {
     }
 
     public boolean prevLine() {
-
         if(currentStep>1) {
             currentStep -=2;
             nextLine();
@@ -97,20 +95,19 @@ public class LogReader {
     }
 
     public void goForwardToBreakPoint(Set<Integer> breakPoints){
-        do{
+        do {
             if(!nextLine()) break;
-        }while(!breakPoints.contains(code.getCurrentLine()+1));
+        } while(!breakPoints.contains(code.getCurrentLine()+1));
     }
 
     public void goBackwardsToBreakPoint(Set<Integer> breakPoints){
 
-        do{
+        do {
             if(!prevLine()) break;
-        }
-        while(!breakPoints.contains(code.getCurrentLine()+1));
+        } while(!breakPoints.contains(code.getCurrentLine()+1));
     }
-    private void setRegisters(byte[] bytes) {
 
+    private void setRegisters(byte[] bytes) {
         registers.setAx(readRegister(bytes, 1));
         registers.setBx(readRegister(bytes, 2));
         registers.setCx(readRegister(bytes, 3));
@@ -118,14 +115,13 @@ public class LogReader {
     }
 
     private int readRegister(byte[] bytes, int n) {
-
         int value = (int) (ConvertToUnsignedValue(bytes[2*n]) << 8);
         value += ConvertToUnsignedValue(bytes[2*n+1]);
         return value;
-
     }
 
     @SuppressWarnings("unused")
+    //Debug only
     private void printRegisters(byte[] bytes) {
         for(var register : bytes) {
             if(register < 0) {
@@ -138,14 +134,12 @@ public class LogReader {
     }
 
     private int ConvertToUnsignedValue(byte signedByte) {
-
         final int bias = 256;
 
         if(signedByte < 0) {
             return (int)signedByte + bias;
         }
         return (int)signedByte;
-
     }
 
     private String getFileName() {

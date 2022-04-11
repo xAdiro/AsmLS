@@ -5,10 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import com.adiro.asmls.App;
-import com.adiro.asmls.gui.GuiColors;
-
-import com.adiro.asmls.gui.content.ContentView;
 import javafx.geometry.Insets;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
@@ -16,8 +12,11 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 
-public class CodeView extends StyledScrollPane {
+import com.adiro.asmls.App;
+import com.adiro.asmls.gui.GuiColors;
+import com.adiro.asmls.gui.content.ContentView;
 
+public class CodeView extends StyledScrollPane {
     private List<TextLine> sourceCode;
     private int currentLine = 0;
     private String sourceCodePath;

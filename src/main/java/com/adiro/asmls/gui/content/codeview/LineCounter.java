@@ -1,18 +1,16 @@
 package com.adiro.asmls.gui.content.codeview;
 
-import com.adiro.asmls.App;
-import com.adiro.asmls.gui.GuiColors;
-import com.adiro.asmls.gui.content.ContentView;
 import javafx.geometry.Insets;
-import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
-import javafx.scene.control.Button;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Font;
-import javafx.scene.text.FontPosture;
 import javafx.scene.text.Text;
+
+import com.adiro.asmls.App;
+import com.adiro.asmls.gui.GuiColors;
+import com.adiro.asmls.gui.content.ContentView;
 
 public class LineCounter extends VBox{
     private int numberOfLines;
@@ -24,19 +22,17 @@ public class LineCounter extends VBox{
         setBackground(new Background(
                 new BackgroundFill(
                         GuiColors.BACKGROUND1, null, null)));
-
-        for(int i = 1; i<=numberOfLines;i++) {
-            getChildren().add(new LineText(i));
-        }
-        this.numberOfLines = numberOfLines;
-
-
         setBorder(new Border(
                 new BorderStroke(
                         Color.DARKGREY,
                         BorderStrokeStyle.SOLID,
                         null,
                         new BorderWidths(0,5,0,0))));
+
+        for(int i = 1; i<=numberOfLines;i++) {
+            getChildren().add(new LineText(i));
+        }
+        this.numberOfLines = numberOfLines;
     }
 
     public void setLineNumber(int newValue) {
@@ -53,7 +49,6 @@ public class LineCounter extends VBox{
                 numberOfLines--;
                 getChildren().remove(numberOfLines);
             }
-            return;
         }
     }
 

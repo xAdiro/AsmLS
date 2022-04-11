@@ -1,7 +1,5 @@
 package com.adiro.asmls.gui.content;
 
-import com.adiro.asmls.gui.GuiColors;
-import com.adiro.asmls.gui.global_blocks.DoubleText;
 import javafx.geometry.Insets;
 import javafx.scene.control.Separator;
 import javafx.scene.layout.Background;
@@ -10,13 +8,16 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 
+import com.adiro.asmls.gui.GuiColors;
+import com.adiro.asmls.gui.global_blocks.DoubleText;
+
 public class RegistersView extends VBox{
 
-    private StandardRegister ax;
-    private StandardRegister bx;
-    private StandardRegister cx;
-    private StandardRegister dx;
-    private FlagsRegister flags;
+    private final StandardRegister ax;
+    private final StandardRegister bx;
+    private final StandardRegister cx;
+    private final StandardRegister dx;
+    private final FlagsRegister flags;
 
     public RegistersView() {
         super();
@@ -30,8 +31,6 @@ public class RegistersView extends VBox{
         dx = new StandardRegister(" D");
         flags = new FlagsRegister();
 
-
-
         getChildren().add(ax);
         getChildren().add(new Separator());
         getChildren().add(bx);
@@ -41,8 +40,6 @@ public class RegistersView extends VBox{
         getChildren().add(dx);
         getChildren().add(new Separator());
         getChildren().add(flags);
-
-
     }
 
     public void setAx(int newValue) {
@@ -67,9 +64,9 @@ public class RegistersView extends VBox{
 
     private class StandardRegister extends HBox{
         int value = 0;
-        private DoubleText rxText;
-        private DoubleText rlText;
-        private DoubleText rhText;
+        private final DoubleText rxText;
+        private final DoubleText rlText;
+        private final DoubleText rhText;
 
         public StandardRegister(String registerLetter) {
             super();
@@ -96,11 +93,8 @@ public class RegistersView extends VBox{
 
         public void setValue(int newValue) {
             setNewText(rxText, newValue);
-            //rxText.setValue(newValue);
             setNewText(rlText, newValue & 0x00FF);
-            //rlText.setValue(newValue & 0x00FF);
             setNewText(rhText, newValue >> 8);
-            //rhText.setValue(newValue >> 8);
         }
 
         private void setNewText(DoubleText text, int newValue){
@@ -115,8 +109,7 @@ public class RegistersView extends VBox{
     }
 
     private class FlagsRegister extends VBox{
-
-        private DoubleText[] flags;
+        private final DoubleText[] flags;
 
         public FlagsRegister() {
             super();
@@ -124,7 +117,7 @@ public class RegistersView extends VBox{
             var flagFontSize = 16;
             flags = new DoubleText[16];
             flags[0] = new DoubleText("CF:", "0", flagFontSize);
-            //flags[1] = new DoubleText("1:", "0", flagFontSize);
+            //flags[1] = new DoubleText("1:", "0", flagFontSize);           // consider adding them as an option in future
             flags[2] = new DoubleText("PF:", "0", flagFontSize);
             //flags[3] = new DoubleText("0:", "0", flagFontSize);
             flags[4] = new DoubleText("AF:", "0", flagFontSize);
@@ -147,7 +140,6 @@ public class RegistersView extends VBox{
                 }
             }
             VBox.setMargin(this, new Insets(0,0,0,10));
-
         }
 
         public void setValue(int newValue) {

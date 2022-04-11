@@ -1,33 +1,29 @@
 package com.adiro.asmls.gui.content;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
-import com.adiro.asmls.gui.content.codeview.CodeView;
-import com.adiro.asmls.logic.LogReader;
-import javafx.beans.NamedArg;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 
-public class ContentView extends HBox{
+import com.adiro.asmls.gui.content.codeview.CodeView;
+import com.adiro.asmls.logic.LogReader;
 
+public class ContentView extends HBox{
     private final RegistersView registersView;
     private final CodeView codeView;
     private final LogReader logReader;
     private Set<Integer> breakPoints;
 
     public ContentView() {
-
         super();
         setMaxWidth(Double.MAX_VALUE);
         setMaxHeight(Double.MAX_VALUE);
         VBox.setVgrow(this, Priority.ALWAYS);
 
-       registersView = new RegistersView();
+        registersView = new RegistersView();
         codeView = new CodeView(this);
         HBox.setHgrow(codeView, Priority.ALWAYS);
         VBox.setVgrow(codeView, Priority.ALWAYS);

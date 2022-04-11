@@ -1,7 +1,5 @@
 package com.adiro.asmls.gui.window.settings.item;
 
-import javafx.beans.Observable;
-import javafx.collections.FXCollections;
 import javafx.scene.control.ComboBox;
 import javafx.scene.text.Text;
 
@@ -19,6 +17,5 @@ public class NumberFormat extends SettingsItem{
         options.getSelectionModel().selectFirst();
 
         getChildren().addAll(label, options);
-
     }
 }

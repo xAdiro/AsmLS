@@ -1,8 +1,5 @@
 package com.adiro.asmls.gui.menubar.textmenu;
 
-import com.adiro.asmls.gui.GuiColors;
-import com.adiro.asmls.gui.content.ContentView;
-
 import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
@@ -10,11 +7,13 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.stage.Stage;
 
+import com.adiro.asmls.gui.GuiColors;
+import com.adiro.asmls.gui.content.ContentView;
+
 public class TextMenuBar extends MenuBar{
 
     public TextMenuBar(ContentView contentView, Stage stage) {
         super();
-
         setBackground(
                 new Background(
                         new BackgroundFill(
@@ -31,11 +30,10 @@ public class TextMenuBar extends MenuBar{
         label2.setTextFill(GuiColors.TEXT);
         menuEdit.setGraphic(label2);
 
-        //var settingsMenu = new SettingsMenu(stage.getScene().getRoot());  //disabling for now
+        //var settingsMenu = new SettingsMenu(stage.getScene().getRoot());  //Uncomment when fully implemented
         var settingsMenu = new Menu("Settings");
 
         getMenus().addAll(menuFile, menuEdit, settingsMenu);
     }
-
 }
 

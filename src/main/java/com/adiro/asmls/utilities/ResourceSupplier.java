@@ -1,13 +1,14 @@
 package com.adiro.asmls.utilities;
 
-import com.adiro.asmls.App;
-import javafx.scene.image.ImageView;
-
 import java.io.File;
 import java.io.InputStream;
 
-public class ResourceSupplier {
+import javafx.scene.image.ImageView;
 
+import com.adiro.asmls.App;
+
+
+public class ResourceSupplier {
     public static class Icons{
         final public static ImageView next = getPath("next");
         final public static ImageView previous = getPath("previous");
@@ -27,15 +28,18 @@ public class ResourceSupplier {
 
     public static class Files{
         public static class Debug{
-            public static String path(String sourceFilePath){ //Path is relative to source file path
+            public static String path(String sourceFilePath){
                 return getFileDirectory(sourceFilePath) + "/debug/runDebug.asm";
             }
+
             public static String runFilePath(String sourceFilePath){
                 return getFileDirectory(sourceFilePath) + "/runDebu.bat";
             }
+
             public static InputStream sourcePath(){
                 return App.class.getResourceAsStream("files/debug.asm");
             }
+
             public static String dirPath(String sourceFilePath){
                 return getFileDirectory(sourceFilePath) + "/debug";
             }
