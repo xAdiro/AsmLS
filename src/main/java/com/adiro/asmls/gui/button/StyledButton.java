@@ -3,8 +3,9 @@ package com.adiro.asmls.gui.button;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
-abstract class StyledButton extends Button {
 
+
+abstract class StyledButton extends Button {
     public StyledButton(){
         super();
         setCustomStyle();
@@ -35,7 +36,5 @@ abstract class StyledButton extends Button {
         setMinHeight(height);
         setMaxHeight(height);
     }
-
-
 }
 

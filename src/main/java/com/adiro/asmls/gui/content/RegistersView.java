@@ -11,6 +11,7 @@ import javafx.scene.paint.Color;
 import com.adiro.asmls.gui.GuiColors;
 import com.adiro.asmls.gui.global_blocks.DoubleText;
 
+
 public class RegistersView extends VBox{
 
     private final StandardRegister ax;

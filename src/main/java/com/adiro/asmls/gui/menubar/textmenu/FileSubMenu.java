@@ -15,6 +15,7 @@ import javafx.scene.paint.Color;
 import com.adiro.asmls.gui.content.ContentView;
 import com.adiro.asmls.logic.DebugFileCreator;
 
+
 public class FileSubMenu extends MenuItem{
     public FileSubMenu(@NamedArg("contentView") ContentView contentView, @NamedArg("stage") Stage stage){
         super();
@@ -45,7 +46,7 @@ public class FileSubMenu extends MenuItem{
             contentView.setSourceCodePath(filePath);
             contentView.firstLine();
             setPrevLocation(filePath);
-            DebugFileCreator.createRunFile(filePath);
+            new DebugFileCreator(filePath).createRunFile();
             System.out.println("Selected: " + filePath);
         }
         else {

@@ -1,9 +1,7 @@
 package com.adiro.asmls;
 
-import java.io.IOException;
-
+import com.adiro.asmls.gui.MainScene;
 import javafx.application.Application;
-import javafx.scene.Scene;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
@@ -15,19 +13,16 @@ import com.adiro.asmls.logic.StartFilesCreator;
 
 
 public class App extends Application {
-
-    public static void main(String[] args) {
+    public static void run(String[] args) {
         launch();
     }
 
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage){
         StartFilesCreator.generateFiles();
 
         StackPane stackPane = new StackPane();
-        var scene = new Scene(stackPane, 1366, 768);
-        scene.getStylesheets().add(getClass().getResource("styles/scrollbar-style.css").toExternalForm());
-        scene.getStylesheets().add(getClass().getResource("styles/common-styles.css").toExternalForm());
+        MainScene scene = new MainScene(stackPane);
 
         stage.setScene(scene);
         stage.setTitle("AsmLS");

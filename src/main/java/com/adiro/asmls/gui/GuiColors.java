@@ -2,6 +2,7 @@ package com.adiro.asmls.gui;
 
 import javafx.scene.paint.Color;
 
+
 public final class GuiColors {
     public static final Color LINEPASSED = Color.web("#00cc00", 0.2);
     public static final Color LINEERROR = Color.web("#ff0000", 0.2);

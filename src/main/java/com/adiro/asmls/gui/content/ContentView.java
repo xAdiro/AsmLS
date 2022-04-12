@@ -11,28 +11,30 @@ import javafx.scene.layout.VBox;
 import com.adiro.asmls.gui.content.codeview.CodeView;
 import com.adiro.asmls.logic.LogReader;
 
+
 public class ContentView extends HBox{
-    private final RegistersView registersView;
     private final CodeView codeView;
     private final LogReader logReader;
-    private Set<Integer> breakPoints;
+    private final Set<Integer> breakPoints;
 
     public ContentView() {
         super();
+
         setMaxWidth(Double.MAX_VALUE);
         setMaxHeight(Double.MAX_VALUE);
         VBox.setVgrow(this, Priority.ALWAYS);
 
-        registersView = new RegistersView();
+        RegistersView registersView = new RegistersView();
         codeView = new CodeView(this);
         HBox.setHgrow(codeView, Priority.ALWAYS);
         VBox.setVgrow(codeView, Priority.ALWAYS);
+
         logReader = new LogReader(registersView, codeView);
 
         getChildren().addAll(codeView, registersView);
-
         breakPoints = new HashSet<Integer>();
     }
+
     public void firstLine(){
         logReader.goToFirstLine();
     }
@@ -45,8 +47,8 @@ public class ContentView extends HBox{
         logReader.nextLine();
     }
 
-    public boolean prevLine() {
-        return logReader.prevLine();
+    public void prevLine() {
+        logReader.prevLine();
     }
 
     public void nextBreakPoint(){
@@ -67,7 +69,7 @@ public class ContentView extends HBox{
 
     public void setSourceCodePath(String path) {
         codeView.setSourceCodePath(path);
-        logReader.setLogDirectory(getFileDirectory(path) + "/debug/");
+        logReader.setLogDirectory(getFileDirectory(path) + "/debug");
     }
 
     public void refreshContent(){

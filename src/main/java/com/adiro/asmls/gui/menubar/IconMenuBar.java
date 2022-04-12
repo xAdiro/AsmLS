@@ -12,6 +12,7 @@ import com.adiro.asmls.gui.GuiColors;
 import com.adiro.asmls.gui.button.*;
 import com.adiro.asmls.gui.content.ContentView;
 
+
 public class IconMenuBar extends VBox{
     public IconMenuBar(ContentView contentView, Stage stage) {
         super();

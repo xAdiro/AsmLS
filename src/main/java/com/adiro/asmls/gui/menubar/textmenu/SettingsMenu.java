@@ -6,6 +6,7 @@ import javafx.scene.control.Menu;
 
 import com.adiro.asmls.gui.window.settings.SettingsWindow;
 
+
 public class SettingsMenu extends Menu {
     private final SettingsWindow window;
     public SettingsMenu(Node mainWindow){

@@ -1,16 +1,14 @@
 package com.adiro.asmls.gui.button;
 
-import com.adiro.asmls.App;
-import com.adiro.asmls.gui.content.ContentView;
-
-import com.adiro.asmls.utilities.ResourceSupplier;
-import javafx.beans.NamedArg;
 import javafx.scene.control.Tooltip;
-import javafx.scene.image.ImageView;
+
+import com.adiro.asmls.gui.content.ContentView;
+import com.adiro.asmls.utilities.ResourceSupplier;
+
 
 public class MoveManyNextButton extends MoveNextButton{
 
-    public MoveManyNextButton(@NamedArg("contentView") ContentView contentView) {
+    public MoveManyNextButton(ContentView contentView) {
         super(contentView);
         setGraphic(ResourceSupplier.Icons.manyNext);
         setTooltip(new Tooltip("Move 10 lines forward"));

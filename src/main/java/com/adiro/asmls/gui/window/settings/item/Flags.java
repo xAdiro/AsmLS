@@ -3,6 +3,7 @@ package com.adiro.asmls.gui.window.settings.item;
 import javafx.scene.control.CheckBox;
 import javafx.scene.text.Text;
 
+
 public class Flags extends SettingsItem{
     public Flags(){
         super();

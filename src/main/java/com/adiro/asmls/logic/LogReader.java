@@ -4,90 +4,87 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.List;
 import java.util.Set;
 
 import com.adiro.asmls.gui.content.RegistersView;
 import com.adiro.asmls.gui.content.codeview.CodeView;
+import com.adiro.asmls.utilities.ResourceSupplier;
 
 public class LogReader {
-    RegistersView registers;
-    CodeView code;
+    RegistersManager registers;
+    CodeView sourceArea;
     int currentStep = 0;
     private String filePrefix;
-    private List<Integer> breakPoints;
 
     public LogReader(RegistersView registers, CodeView sourceArea) {
-        this.registers = registers;
-        this.code = sourceArea;
+        this.registers = new RegistersManager(registers);
+        this.sourceArea = sourceArea;
 
         try {
-            var resource = ".AsmLS-Config";
-            BufferedReader br = new BufferedReader(new FileReader(resource));
-            setLogDirectory(new File(br.readLine()).getParent()+"/debug/");
-            br.close();
+            var prevConfigFile = ".AsmLS-Config";
+            BufferedReader reader = new BufferedReader(new FileReader(prevConfigFile));
+            var prevOriginalFilePath = reader.readLine();
+
+            setLogDirectory(ResourceSupplier.Files.Debug.dirPathFromSource(prevOriginalFilePath));
+            reader.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
+    public void setLogDirectory(String location) {
+        filePrefix = location + "/";
+    }
+
     public void goToFirstLine(){
-        byte[] step = null;
+        byte[] debugInfo;
         try {
-            Path path = Paths.get(getFileName(0));
-            step = Files.readAllBytes(path);
+            Path firstFilePath = Paths.get(getFirstFilePath());
+            debugInfo = Files.readAllBytes(firstFilePath);
         } catch (IOException e) {
             e.printStackTrace();
             return;
         }
-        currentStep = 1;
+        sourceArea.goToLine(registers.readLineNumber(debugInfo));
+        registers.set(debugInfo);
 
-        code.goToLine(readRegister(step, 0));
-        setRegisters(step);
-        registers.setFlags(readRegister(step, 9));
+        currentStep = 1;
     }
 
     public void goToLastLine(){
-        Path checkedPath = null;
+        Path checkedFilePath;
         do {
             currentStep++;
-            checkedPath = Paths.get(getFileName());
-        } while(Files.exists(checkedPath));
+            checkedFilePath = Paths.get(getFilePath());
+        } while(Files.exists(checkedFilePath));
 
-        currentStep--;
+        currentStep--;  // File doesn't exist so go back where it exists
         nextLine();
         nextLine();
     }
 
     public boolean nextLine(){
-        byte[] step = null;
+        byte[] debugInfo = null;
         try {
-            Path path = Paths.get(getFileName());
-            step = Files.readAllBytes(path);
+            Path filePath = Paths.get(getFilePath());
+            debugInfo = Files.readAllBytes(filePath);
         } catch (IOException e) {
-            currentStep--;
-            Path previousFile = Paths.get(getFileName());
-            if(Files.exists(previousFile)){
-                currentStep+=2;
-                code.goToNextLine();
-                code.haltLine(code.getCurrentLine());
+            if(!isAlreadyHalted()){
+                haltLine();
             }
-            else{
-                currentStep++;
-            }
-            return false;
+            return false; // no next line
         }
-        currentStep++;
 
-        code.goToLine(readRegister(step, 0));
-        setRegisters(step);
-        registers.setFlags(readRegister(step, 9));
+        sourceArea.goToLine(registers.readLineNumber(debugInfo));
+        registers.set(debugInfo);
+
+        currentStep++;
         return true;
     }
 
     public boolean prevLine() {
         if(currentStep>1) {
-            currentStep -=2;
+            currentStep -=2; // 2 steps backwards to use nextLine() -2 + 1 = -1
             nextLine();
             return true;
         }
@@ -96,67 +93,45 @@ public class LogReader {
 
     public void goForwardToBreakPoint(Set<Integer> breakPoints){
         do {
-            if(!nextLine()) break;
-        } while(!breakPoints.contains(code.getCurrentLine()+1));
+            var doesNextLineExists = nextLine();
+            if(!doesNextLineExists) break;
+        } while(!breakPoints.contains(sourceArea.getCurrentLine()+1));
     }
 
     public void goBackwardsToBreakPoint(Set<Integer> breakPoints){
-
         do {
-            if(!prevLine()) break;
-        } while(!breakPoints.contains(code.getCurrentLine()+1));
+            var doesPrevLineExists = prevLine();
+            if(!doesPrevLineExists) break;
+        } while(!breakPoints.contains(sourceArea.getCurrentLine()+1));
     }
 
-    private void setRegisters(byte[] bytes) {
-        registers.setAx(readRegister(bytes, 1));
-        registers.setBx(readRegister(bytes, 2));
-        registers.setCx(readRegister(bytes, 3));
-        registers.setDx(readRegister(bytes, 4));
+    private String getFirstFilePath(){
+        return getFilePath(0);
     }
 
-    private int readRegister(byte[] bytes, int n) {
-        int value = (int) (ConvertToUnsignedValue(bytes[2*n]) << 8);
-        value += ConvertToUnsignedValue(bytes[2*n+1]);
-        return value;
+    private String getFilePath() {
+        return getFilePath(currentStep);
     }
 
-    @SuppressWarnings("unused")
-    //Debug only
-    private void printRegisters(byte[] bytes) {
-        for(var register : bytes) {
-            if(register < 0) {
-                System.out.println(register+256);
-            }
-            else {
-                System.out.println(register);
-            }
-        }
-    }
-
-    private int ConvertToUnsignedValue(byte signedByte) {
-        final int bias = 256;
-
-        if(signedByte < 0) {
-            return (int)signedByte + bias;
-        }
-        return (int)signedByte;
-    }
-
-    private String getFileName() {
-        var fileName = filePrefix + String.format("%05d", currentStep) + "DEB.LOG";
-        System.out.println("Debug file: " + fileName);
-        return fileName;
-    }
-
-    private String getFileName(int fileId){
+    private String getFilePath(int fileId){
         var fileName = filePrefix + String.format("%05d", fileId) + "DEB.LOG";
         System.out.println("Debug file: " + fileName);
         return fileName;
     }
 
-    public void setLogDirectory(String location) {
-        filePrefix = location;
+    private String getPrevFilePath(){
+        return getFilePath(currentStep -1);
     }
 
+    private boolean isAlreadyHalted(){
+        var prevFile = Paths.get(getPrevFilePath());
+        return !Files.exists(prevFile);
+    }
+
+    private void haltLine(){
+        currentStep++;
+        sourceArea.goToNextLine();
+        sourceArea.haltCurrentLine(sourceArea.getCurrentLine());
+    }
 }
 

@@ -12,9 +12,10 @@ import com.adiro.asmls.App;
 import com.adiro.asmls.gui.GuiColors;
 import com.adiro.asmls.gui.content.ContentView;
 
+
 public class LineCounter extends VBox{
     private int numberOfLines;
-    private ContentView contentView;
+    private final ContentView contentView;
 
     public LineCounter(int numberOfLines, ContentView contentView) {
         super();

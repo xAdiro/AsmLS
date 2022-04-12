@@ -16,12 +16,13 @@ import com.adiro.asmls.App;
 import com.adiro.asmls.gui.GuiColors;
 import com.adiro.asmls.gui.content.ContentView;
 
+
 public class CodeView extends StyledScrollPane {
     private List<TextLine> sourceCode;
     private int currentLine = 0;
     private String sourceCodePath;
-    private VBox code;
-    private LineCounter lineCounter;
+    private final VBox code;
+    private final LineCounter lineCounter;
 
     public CodeView(ContentView contentView) {
         super();
@@ -32,18 +33,15 @@ public class CodeView extends StyledScrollPane {
                         GuiColors.BACKGROUND1, null, null)));
         HBox.setHgrow(code, Priority.ALWAYS);
 
-
         sourceCodePath = getPrevLocation();
         lineCounter = new LineCounter(0, contentView);
         loadSourceCode();
-
 
         var layout = new HBox(lineCounter, code);
         setContent(layout);
     }
 
     public void goToNextLine() {
-
         do {
             if(currentLine < sourceCode.size() - 1) {
                 currentLine++;
@@ -54,12 +52,10 @@ public class CodeView extends StyledScrollPane {
         }
         while(sourceCode.get(currentLine).getText().isBlank());
 
-
         colorLine(currentLine, GuiColors.LINEPASSED);
     }
 
     public boolean goToLine(int index) {
-
         currentLine = -1;
         int i = -1;
 
@@ -81,7 +77,7 @@ public class CodeView extends StyledScrollPane {
         loadSourceCode();
     }
 
-    public void haltLine(int index) {
+    public void haltCurrentLine(int index) {
         clearColors();
         try {
             colorLine(index, GuiColors.LINEERROR);
@@ -96,7 +92,31 @@ public class CodeView extends StyledScrollPane {
         return currentLine;
     }
 
-    private boolean loadSourceCode() {
+    public void refresh(){
+        loadSourceCode();
+        currentLine = 0;
+    }
+
+    public int getLength() {
+        return sourceCode.size();
+    }
+
+    public String getPrevLocation() {
+        String prevLocation = "";
+        try{
+            var resource = ".AsmLS-Config";
+            BufferedReader br = new BufferedReader(new FileReader(resource));
+            prevLocation = br.readLine();
+            br.close();
+        } catch (IOException e) {
+            System.out.println("[WARNING] Missing resources/locations/source in " + getClass());
+        }
+
+        if(prevLocation == null) prevLocation = "./";
+        return prevLocation;
+    }
+
+    private void loadSourceCode() {
         File file = new File(sourceCodePath);
         sourceCode = new ArrayList<>();
 
@@ -105,7 +125,7 @@ public class CodeView extends StyledScrollPane {
             scanner = new Scanner(file);
         } catch (FileNotFoundException e) {
             System.out.println("[ERROR] Couldn't find the file " + file.getAbsolutePath());
-            return false;
+            return;
         }
 
         code.getChildren().clear();
@@ -124,12 +144,6 @@ public class CodeView extends StyledScrollPane {
         scanner.close();
 
         lineCounter.setLineNumber(getLength());
-        return true;
-    }
-
-    public void refresh(){
-        loadSourceCode();
-        currentLine = 0;
     }
 
     private void clearColors() {
@@ -149,29 +163,8 @@ public class CodeView extends StyledScrollPane {
                                 color, CornerRadii.EMPTY, Insets.EMPTY)));
     }
 
-    public String getPrevLocation() {
-
-        String prevLocation = "";
-        try{
-            var resource = ".AsmLS-Config";
-            BufferedReader br = new BufferedReader(new FileReader(resource));
-            prevLocation = br.readLine();
-            br.close();
-        } catch (IOException e) {
-            System.out.println("[WARNING] Missing resources/locations/source in " + getClass());
-        }
-
-        if(prevLocation == null) prevLocation = "./";
-        return prevLocation;
-    }
-
-    public int getLength() {
-        return sourceCode.size();
-    }
-
-    private class TextLine extends TextFlow{
-
-        private Text text;
+    private static class TextLine extends TextFlow{
+        private final Text text;
 
         public TextLine(Text text) {
 
@@ -181,19 +174,9 @@ public class CodeView extends StyledScrollPane {
             setPadding(new Insets(2,0,2,0));
         }
 
-        @SuppressWarnings("unused")
-        public void setBackgroundColor(Color color) {
-            setBackground(
-                    new Background(
-                            new BackgroundFill(
-                                    color, CornerRadii.EMPTY, Insets.EMPTY)));
-        }
-
         public String getText() {
             return text.getText();
         }
     }
-
-
 }
 

@@ -11,11 +11,10 @@ public class SettingsWindow extends Stage {
         super();
         this.mainWindow = mainWindow;
         var scene = new Scene(new SettingsContent(), 800, 600);
+
         setScene(scene);
-
-        scene.getWindow().addEventFilter(WindowEvent.WINDOW_CLOSE_REQUEST, this::close);
-
         setTitle("Settings");
+        scene.getWindow().addEventFilter(WindowEvent.WINDOW_CLOSE_REQUEST, this::close);
     }
 
     public void open(){

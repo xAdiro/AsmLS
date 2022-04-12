@@ -4,10 +4,12 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+import javafx.scene.control.Tooltip;
+
 import com.adiro.asmls.gui.content.ContentView;
 import com.adiro.asmls.logic.DebugFileCreator;
 import com.adiro.asmls.utilities.ResourceSupplier;
-import javafx.scene.control.Tooltip;
+
 
 public class RefreshButton extends StyledButton{
     ContentView contentView;
@@ -21,22 +23,19 @@ public class RefreshButton extends StyledButton{
             contentView.refreshContent();
             generateNewFile();
         });
-
     }
 
     private void generateNewFile() {
-        DebugFileCreator.createRunFile(getPrevFile());
+        new DebugFileCreator(getPrevFile()).createRunFile();
     }
 
     private String getPrevFile() {
-
         String prevLocation = "";
-
         try {
             var resource = ".AsmLS-Config";
-            BufferedReader br = new BufferedReader(new FileReader(resource));
-            prevLocation = br.readLine();
-            br.close();
+            BufferedReader reader = new BufferedReader(new FileReader(resource));
+            prevLocation = reader.readLine();
+            reader.close();
         } catch (IOException e) {
             System.out.print(getClass().toString());
             System.out.println("[WARNING] Missing resources/locations/source, the program might be corrupted");

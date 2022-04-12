@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 import com.adiro.asmls.gui.GuiColors;
 import com.adiro.asmls.gui.content.ContentView;
 
+
 public class TextMenuBar extends MenuBar{
 
     public TextMenuBar(ContentView contentView, Stage stage) {
