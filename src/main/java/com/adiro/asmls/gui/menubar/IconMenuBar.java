@@ -10,11 +10,11 @@ import javafx.stage.Stage;
 
 import com.adiro.asmls.gui.GuiColors;
 import com.adiro.asmls.gui.button.*;
-import com.adiro.asmls.gui.content.ContentView;
+import com.adiro.asmls.gui.content.CodeReader;
 
 
 public class IconMenuBar extends VBox{
-    public IconMenuBar(ContentView contentView, Stage stage) {
+    public IconMenuBar(CodeReader contentView, Stage stage) {
         super();
         getStyleClass().add("icon-menu-bar");
         var buttons = new ButtonSet(

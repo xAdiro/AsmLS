@@ -6,7 +6,7 @@ import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
 import com.adiro.asmls.gui.GuiColors;
-import com.adiro.asmls.gui.content.ContentView;
+import com.adiro.asmls.gui.content.CodeReader;
 import com.adiro.asmls.gui.menubar.IconMenuBar;
 import com.adiro.asmls.gui.menubar.textmenu.TextMenuBar;
 import com.adiro.asmls.logic.StartFilesCreator;
@@ -21,15 +21,15 @@ public class App extends Application {
     public void start(Stage stage){
         StartFilesCreator.generateFiles();
 
-        StackPane stackPane = new StackPane();
-        MainScene scene = new MainScene(stackPane);
+        var stackPane = new StackPane();
+        var scene = new MainScene(stackPane);
 
         stage.setScene(scene);
         stage.setTitle("AsmLS");
         stage.show();
         stage.setMaximized(true);
 
-        var contentView = new ContentView();
+        var contentView = new CodeReader();
         var textMenu = new TextMenuBar(contentView, stage);
         var topMenu = new IconMenuBar(contentView, stage);
         var layout = new VBox(textMenu, topMenu, contentView);

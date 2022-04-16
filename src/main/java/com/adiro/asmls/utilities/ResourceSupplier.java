@@ -53,6 +53,10 @@ public class ResourceSupplier {
                 return App.class.getResource("styles/scrollbar-style.css").toExternalForm();
             }
         }
+
+        public static class Font{
+            public static final String CONSOLA = App.class.getResource("fonts/CONSOLA.TTF").toExternalForm();
+        }
     }
 
     private static String getFileDirectory(String filePath) {

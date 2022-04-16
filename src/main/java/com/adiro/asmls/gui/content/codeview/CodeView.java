@@ -1,153 +1,79 @@
 package com.adiro.asmls.gui.content.codeview;
 
-import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
 import javafx.geometry.Insets;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
-import javafx.scene.text.Text;
-import javafx.scene.text.TextFlow;
 
-import com.adiro.asmls.App;
 import com.adiro.asmls.gui.GuiColors;
-import com.adiro.asmls.gui.content.ContentView;
+
+import java.util.HashSet;
+import java.util.Set;
 
 
 public class CodeView extends StyledScrollPane {
-    private List<TextLine> sourceCode;
+    public final Set<Integer> breakPoints = new HashSet<>();
     private int currentLine = 0;
-    private String sourceCodePath;
-    private final VBox code;
     private final LineCounter lineCounter;
+    private final RawCodeView rawCodeView;
 
-    public CodeView(ContentView contentView) {
+    public CodeView() {
         super();
-        code = new VBox();
-        code.setPadding(new Insets(0,0,0,5));
-        code.setBackground(new Background(
-                new BackgroundFill(
-                        GuiColors.BACKGROUND1, null, null)));
-        HBox.setHgrow(code, Priority.ALWAYS);
+        rawCodeView = new RawCodeView();
+        lineCounter = new LineCounter(breakPoints);
+        setContent(new HBox(lineCounter, rawCodeView));
 
-        sourceCodePath = getPrevLocation();
-        lineCounter = new LineCounter(0, contentView);
-        loadSourceCode();
-
-        var layout = new HBox(lineCounter, code);
-        setContent(layout);
+        loadSourceCodeAndSetLineCounter();
     }
 
-    public void goToNextLine() {
-        do {
-            if(currentLine < sourceCode.size() - 1) {
-                currentLine++;
-            }
-            else {
-                return;
-            }
-        }
-        while(sourceCode.get(currentLine).getText().isBlank());
-
-        colorLine(currentLine, GuiColors.LINEPASSED);
+    private void loadSourceCodeAndSetLineCounter(){
+        rawCodeView.loadSourceCode();
+        lineCounter.setLineNumber(rawCodeView.sourceCode.size());
     }
 
-    public boolean goToLine(int index) {
+    public void refresh(){
+        loadSourceCodeAndSetLineCounter();
+        currentLine = 0;
+    }
+
+    public void goToLine(int index) {
+        if(index >= rawCodeView.sourceCode.size() - 1) return;
+
         currentLine = -1;
         int i = -1;
-
         do {
-            if(currentLine >= sourceCode.size()-1)
-                return false;
-
             goToNextLine();
             i++;
         }
         while(i < index);
 
-        setVvalue( (1.0 / (sourceCode.size()-24.5))* (currentLine - 0.2));
-        return true;
+        focusLine(currentLine);
     }
 
-    public void setSourceCodePath(String newPath) {
-        sourceCodePath = newPath;
-        loadSourceCode();
+    private void focusLine(int lineNumber){
+        setVvalue( (1.0 / (rawCodeView.sourceCode.size()-24.5))* (lineNumber - 0.2));
     }
 
-    public void haltCurrentLine(int index) {
+    public void goToNextLine() {
+        if(currentLine >= rawCodeView.sourceCode.size() - 1) return;
+
+        do {
+            currentLine++;
+        }
+        while(rawCodeView.getLineText(currentLine).isBlank());
+
+        colorLine(currentLine, GuiColors.LINEPASSED);
+    }
+
+    private void colorLine(int lineNumber, Color color) {
         clearColors();
-        try {
-            colorLine(index, GuiColors.LINEERROR);
-        }
-        catch(Exception e) {
-            System.out.println("[ERROR] No line to color");
-        }
-
-    }
-
-    public int getCurrentLine() {
-        return currentLine;
-    }
-
-    public void refresh(){
-        loadSourceCode();
-        currentLine = 0;
-    }
-
-    public int getLength() {
-        return sourceCode.size();
-    }
-
-    public String getPrevLocation() {
-        String prevLocation = "";
-        try{
-            var resource = ".AsmLS-Config";
-            BufferedReader br = new BufferedReader(new FileReader(resource));
-            prevLocation = br.readLine();
-            br.close();
-        } catch (IOException e) {
-            System.out.println("[WARNING] Missing resources/locations/source in " + getClass());
-        }
-
-        if(prevLocation == null) prevLocation = "./";
-        return prevLocation;
-    }
-
-    private void loadSourceCode() {
-        File file = new File(sourceCodePath);
-        sourceCode = new ArrayList<>();
-
-        Scanner scanner = null;
-        try {
-            scanner = new Scanner(file);
-        } catch (FileNotFoundException e) {
-            System.out.println("[ERROR] Couldn't find the file " + file.getAbsolutePath());
-            return;
-        }
-
-        code.getChildren().clear();
-        while(scanner.hasNextLine()) {
-            var line = new Text(scanner.nextLine());
-
-            Font font = Font.loadFont(App.class.getResource("fonts/CONSOLA.TTF").toExternalForm(), 23);
-            line.setFont(font);
-
-            line.setFill(GuiColors.TEXT);
-
-            var textLine = new TextLine(line);
-            sourceCode.add(textLine);
-            code.getChildren().add(textLine);
-        }
-        scanner.close();
-
-        lineCounter.setLineNumber(getLength());
+        rawCodeView.sourceCode.get(lineNumber).setBackground(
+                new Background(
+                        new BackgroundFill(
+                                color, CornerRadii.EMPTY, Insets.EMPTY)));
     }
 
     private void clearColors() {
-        for(var line : sourceCode) {
+        for(var line : rawCodeView.sourceCode) {
             line.setBackground(
                     new Background(
                             new BackgroundFill(
@@ -155,28 +81,22 @@ public class CodeView extends StyledScrollPane {
         }
     }
 
-    private void colorLine(int n, Color color) {
+    public void haltLine(int index) {
         clearColors();
-        sourceCode.get(n).setBackground(
-                new Background(
-                        new BackgroundFill(
-                                color, CornerRadii.EMPTY, Insets.EMPTY)));
+        try {
+            colorLine(index, GuiColors.LINEERROR);
+        }
+        catch(Exception e) {
+            System.out.println("[ERROR] No line to color");
+        }
     }
 
-    private static class TextLine extends TextFlow{
-        private final Text text;
+    public int getCurrentLine() {
+        return currentLine;
+    }
 
-        public TextLine(Text text) {
-
-            super(text);
-            this.text = text;
-            setPadding(new Insets(0));
-            setPadding(new Insets(2,0,2,0));
-        }
-
-        public String getText() {
-            return text.getText();
-        }
+    public void setSourceCodePath(String newPath){
+        rawCodeView.setSourceCodePath(newPath);
     }
 }
 

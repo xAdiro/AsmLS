@@ -19,8 +19,6 @@ public class StyledScrollPane extends ScrollPane{
         setBackground(new Background(
                 new BackgroundFill(
                         GuiColors.BACKGROUND2, null, null)));
-        applyCss();
     }
-
 }
 

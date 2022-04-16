@@ -8,12 +8,12 @@ import javafx.scene.layout.BackgroundFill;
 import javafx.stage.Stage;
 
 import com.adiro.asmls.gui.GuiColors;
-import com.adiro.asmls.gui.content.ContentView;
+import com.adiro.asmls.gui.content.CodeReader;
 
 
 public class TextMenuBar extends MenuBar{
 
-    public TextMenuBar(ContentView contentView, Stage stage) {
+    public TextMenuBar(CodeReader contentView, Stage stage) {
         super();
         setBackground(
                 new Background(

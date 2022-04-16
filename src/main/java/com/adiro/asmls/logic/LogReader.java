@@ -4,22 +4,16 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Set;
 
 import com.adiro.asmls.gui.content.RegistersView;
 import com.adiro.asmls.gui.content.codeview.CodeView;
 import com.adiro.asmls.utilities.ResourceSupplier;
 
 public class LogReader {
-    RegistersManager registers;
-    CodeView sourceArea;
     int currentStep = 0;
     private String filePrefix;
 
-    public LogReader(RegistersView registers, CodeView sourceArea) {
-        this.registers = new RegistersManager(registers);
-        this.sourceArea = sourceArea;
-
+    public LogReader(RegistersView registers, CodeView codeView) {
         try {
             var prevConfigFile = ".AsmLS-Config";
             BufferedReader reader = new BufferedReader(new FileReader(prevConfigFile));
@@ -36,73 +30,66 @@ public class LogReader {
         filePrefix = location + "/";
     }
 
-    public void goToFirstLine(){
+    public byte[] firstLine() throws IOException{
         byte[] debugInfo;
-        try {
-            Path firstFilePath = Paths.get(getFirstFilePath());
-            debugInfo = Files.readAllBytes(firstFilePath);
-        } catch (IOException e) {
-            e.printStackTrace();
-            return;
-        }
-        sourceArea.goToLine(registers.readLineNumber(debugInfo));
-        registers.set(debugInfo);
+        Path firstFilePath = Paths.get(getFirstFilePath());
+        debugInfo = Files.readAllBytes(firstFilePath);
 
         currentStep = 1;
+        return debugInfo;
     }
 
-    public void goToLastLine(){
-        Path checkedFilePath;
-        do {
+    public byte[] readLastLine(){
+        Path checkedFilePath = Paths.get(getFilePath());
+        while(Files.exists(checkedFilePath)){
             currentStep++;
             checkedFilePath = Paths.get(getFilePath());
-        } while(Files.exists(checkedFilePath));
+        }
 
         currentStep--;  // File doesn't exist so go back where it exists
-        nextLine();
-        nextLine();
+
+        try{
+            var lastLine = readNextLine();
+
+            if (Files.exists(Paths.get(getFilePath(currentStep-1)))) currentStep++;
+
+            return lastLine;
+        }
+        catch (IOException e){
+            currentStep-=3;
+            byte[] lastLine = null;
+            try {
+                lastLine = readNextLine();
+                return readNextLine();
+            } catch (IOException e2){/* ignore */}
+        }
+        return new byte[]{};
+
     }
 
-    public boolean nextLine(){
-        byte[] debugInfo = null;
-        try {
-            Path filePath = Paths.get(getFilePath());
-            debugInfo = Files.readAllBytes(filePath);
-        } catch (IOException e) {
-            if(!isAlreadyHalted()){
-                haltLine();
-            }
-            return false; // no next line
-        }
-
-        sourceArea.goToLine(registers.readLineNumber(debugInfo));
-        registers.set(debugInfo);
-
+    public byte[] readNextLine() throws IOException{
+        byte[] debugInfo;
+        Path filePath = Paths.get(getFilePath());
         currentStep++;
-        return true;
-    }
-
-    public boolean prevLine() {
-        if(currentStep>1) {
-            currentStep -=2; // 2 steps backwards to use nextLine() -2 + 1 = -1
-            nextLine();
-            return true;
+        try{
+            debugInfo = Files.readAllBytes(filePath);
         }
-        return false;
+        catch (IOException e){
+            if (!Files.exists(Paths.get(getFilePath(currentStep-2)))) currentStep--;
+            throw e;
+        }
+
+        return debugInfo;
     }
 
-    public void goForwardToBreakPoint(Set<Integer> breakPoints){
-        do {
-            var doesNextLineExists = nextLine();
-            if(!doesNextLineExists) break;
-        } while(!breakPoints.contains(sourceArea.getCurrentLine()+1));
-    }
-
-    public void goBackwardsToBreakPoint(Set<Integer> breakPoints){
-        do {
-            var doesPrevLineExists = prevLine();
-            if(!doesPrevLineExists) break;
-        } while(!breakPoints.contains(sourceArea.getCurrentLine()+1));
+    public byte[] readPrevLine() throws IOException{
+        if(currentStep>1) {
+            currentStep-=2;
+            Path filePath = Paths.get(getFilePath());
+            currentStep++;
+            return Files.readAllBytes(filePath);
+        }
+        throw new IOException();
     }
 
     private String getFirstFilePath(){
@@ -117,21 +104,6 @@ public class LogReader {
         var fileName = filePrefix + String.format("%05d", fileId) + "DEB.LOG";
         System.out.println("Debug file: " + fileName);
         return fileName;
-    }
-
-    private String getPrevFilePath(){
-        return getFilePath(currentStep -1);
-    }
-
-    private boolean isAlreadyHalted(){
-        var prevFile = Paths.get(getPrevFilePath());
-        return !Files.exists(prevFile);
-    }
-
-    private void haltLine(){
-        currentStep++;
-        sourceArea.goToNextLine();
-        sourceArea.haltCurrentLine(sourceArea.getCurrentLine());
     }
 }
 

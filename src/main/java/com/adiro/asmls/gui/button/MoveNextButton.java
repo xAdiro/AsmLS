@@ -2,12 +2,12 @@ package com.adiro.asmls.gui.button;
 
 import javafx.scene.control.Tooltip;
 
-import com.adiro.asmls.gui.content.ContentView;
+import com.adiro.asmls.gui.content.CodeReader;
 import com.adiro.asmls.utilities.ResourceSupplier;
 
 
 public class MoveNextButton extends StyledButton{
-    public MoveNextButton(ContentView contentView) {
+    public MoveNextButton(CodeReader contentView) {
         super();
         setGraphic(ResourceSupplier.Icons.next);
         getStyleClass().add("next-button");
@@ -16,7 +16,7 @@ public class MoveNextButton extends StyledButton{
 
     }
 
-    protected void moveNext(ContentView contentView) {
+    protected void moveNext(CodeReader contentView) {
         contentView.nextLine();
     }
 

@@ -2,12 +2,12 @@ package com.adiro.asmls.gui.button;
 
 import javafx.scene.control.Tooltip;
 
-import com.adiro.asmls.gui.content.ContentView;
+import com.adiro.asmls.gui.content.CodeReader;
 import com.adiro.asmls.utilities.ResourceSupplier;
 
 
 public class MoveBackwardsToBreakPointButton extends StyledButton{
-    public MoveBackwardsToBreakPointButton(ContentView contentView) {
+    public MoveBackwardsToBreakPointButton(CodeReader contentView) {
         super();
         setDefaultIcon();
         setTooltip(new Tooltip("Move to the previous breakpoint"));

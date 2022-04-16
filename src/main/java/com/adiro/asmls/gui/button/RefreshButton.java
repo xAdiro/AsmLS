@@ -6,14 +6,14 @@ import java.io.IOException;
 
 import javafx.scene.control.Tooltip;
 
-import com.adiro.asmls.gui.content.ContentView;
+import com.adiro.asmls.gui.content.CodeReader;
 import com.adiro.asmls.logic.DebugFileCreator;
 import com.adiro.asmls.utilities.ResourceSupplier;
 
 
 public class RefreshButton extends StyledButton{
-    ContentView contentView;
-    public RefreshButton(ContentView contentView) {
+    CodeReader contentView;
+    public RefreshButton(CodeReader contentView) {
         super();
         setGraphic(ResourceSupplier.Icons.refresh);
         setTooltip(new Tooltip("Refresh for changes"));

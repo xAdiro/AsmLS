@@ -12,12 +12,12 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.paint.Color;
 
-import com.adiro.asmls.gui.content.ContentView;
+import com.adiro.asmls.gui.content.CodeReader;
 import com.adiro.asmls.logic.DebugFileCreator;
 
 
 public class FileSubMenu extends MenuItem{
-    public FileSubMenu(@NamedArg("contentView") ContentView contentView, @NamedArg("stage") Stage stage){
+    public FileSubMenu(@NamedArg("contentView") CodeReader contentView, @NamedArg("stage") Stage stage){
         super();
         Label label = new Label("Open new file");
         label.setTextFill(Color.BLACK);
@@ -30,7 +30,7 @@ public class FileSubMenu extends MenuItem{
         setOnAction(e -> changeFile(contentView, stage));
     }
 
-    private void changeFile(ContentView contentView, Stage stage) {
+    private void changeFile(CodeReader contentView, Stage stage) {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Open Resource File");
 
